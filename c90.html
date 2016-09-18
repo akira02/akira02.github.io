@@ -6,6 +6,8 @@
     <title>COMIKET 90 &amp; 關東</title>
     <!--窩不會寫網頁OAQ不要看OAQQ拜託OAQQQ-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Facebook Open Graph Meta Tags -->
     <meta property="og:title" content="Comiket 90 &amp; 關東">
@@ -37,7 +39,7 @@
         h1 {
           color: #fff;
           font-size: 5em;
-          font-weight: 900,800;
+          font-weight: 800;
           margin-top: 100px;
           margin-bottom: 30px;
           letter-spacing: 0.1em;
@@ -56,7 +58,7 @@
           margin-bottom: 120px;
           margin-left: 40px;
         }
-        
+
         iframe {
           display: block;
           height: 600px;
@@ -81,13 +83,20 @@
                   flex-grow: 1;
           width: 100%;
         }
-        @media screen and (max-width:1023px){
+        @media screen and (max-width:1160px){
           #fr > iframe {
              width: 100%;
           }
+          h1{
+            line-height: 1.1em;
+          }
+          h2{
+              margin-left:10%;
+              margin-top:0;
+          }
 
         }
-        @media screen and (min-width: 1024px) and (max-width: 1919px) {
+        @media screen and (min-width: 1160px) and (max-width: 1920px) {
           #fr > iframe {
             width: 50%;
           }
