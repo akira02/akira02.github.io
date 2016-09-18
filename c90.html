@@ -19,15 +19,15 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
     <style>
-
         a, a:visited, a:hover, a:active {
             color: inherit;
             font-weight: 100;
+            text-decoration: none;
         }
 
-        h1,p {
+        h1,h2,p {
             margin: 3px;
-            font-family: "source-han-sans-traditional", Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
+            font-family: "soleil", "source-han-sans-traditional", Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
             position: relative;
             left: 10%;
             margin: 30px;
@@ -35,15 +35,23 @@
         }
         h1 {
           color: #fff;
-          font-size: 500%;
-          font-weight: 900;
-          margin-top: 80px;
-          margin-bottom: 50px;
+          font-size: 5em;
+          font-weight: 900,800;
+          margin-top: 100px;
+          margin-bottom: 30px;
+          letter-spacing: 0.1em;
+        }
+        h2 {
+            color: #fff;
+            left: 10%;
+            font-weight: 400;
+            margin-left: 31.2em;
+            margin-top: -60px;
         }
         
         p {
           color: #e5a9a9;
-          font-weight: 200;
+          font-weight: 400;
           margin-bottom: 120px;
           margin-left: 40px;
         }
@@ -71,6 +79,12 @@
               -ms-flex-positive: 1;
                   flex-grow: 1;
           width: 100%;
+        }
+        @media screen and (max-width:1023px){
+          #fr > iframe {
+             width: 100%;
+          }
+
         }
         @media screen and (min-width: 1024px) and (max-width: 1919px) {
           #fr > iframe {
@@ -103,10 +117,11 @@
 
     <!-- Header -->
     <header>
-        <h1>Comiket 90 &amp; 關東</h1>
+        <h1>COMIKET 90 &amp; 關東</h1>
+        <h2>by 千秋<a href="http://plurk.com/akira02">狐</a></h2>
         <p>充滿了人生的第一次，值得紀念的旅程！<br><br>
-        未整理相片庫：<a href="https://goo.gl/photos/GcQn3iUPN7EytmKs9">Google 相簿</a><br>
-        當時的行前規劃記錄：<a href="https://hackpad.com/Comiket-90—LCdRiwoHGc2">Hackpad</a><br><br>
+        未整理相片庫 <a>|</a> <u><a href="https://goo.gl/photos/GcQn3iUPN7EytmKs9">Google 相簿</a></u><br>
+        當時的行前規劃記錄 <a>|</a> <u><a href="https://hackpad.com/Comiket-90—LCdRiwoHGc2">Hackpad</a></u><br><br>
         非常感謝我的3個旅伴，沒有他們，就沒有這次美好的回憶！</p>
     </header>
    <div id="fr">
