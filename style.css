@@ -1,0 +1,80 @@
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: none;
+    margin: 0;
+    font-family: "soleil", "source-han-sans-traditional", Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+
+#first{
+    height: 100vh;
+    background-image: url("./img/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+h1{
+    font-size: 7vw;
+    left: 50%;
+    margin-top: 0;
+    text-shadow: 0 0 300px #fff,0 0 500px #fff;
+    font-family: "source-han-sans-traditional", sans-serif;
+    font-weight: 300;
+}
+
+#heavy{
+    font-weight: 800;
+}
+
+h2{
+    font-size: 3vw;
+}
+
+p{
+    color: #666;
+}
+
+#first_img{
+    width: 30vw;
+    left: 20%;
+}
+
+#about{
+    top: 100%;
+    height: 100vh;
+    background-color: #FFF3EF;
+    display: flex;
+}
+
+#photo1{
+    width: 40%;
+    height: auto;
+    display: inline-block;
+}
+
+#about-photo{
+    background-image: url("./img/photo.png");
+    background-size: cover;
+    background-position:54.25% 10%;
+    width: 60vw;
+}
+
+#about-text{
+    display: inline-block;
+    max-width: 450px;
+    margin: 10%;
+    margin-left: 60px;
+    line-height: 1.5em;
+}
