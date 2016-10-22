@@ -193,14 +193,16 @@
         var viewport = document.getElementById('viewport')
         var aboutDiv = document.getElementById('about')
 
-        function moveAboutDiv() {
-            var delta = viewport.scrollTop - viewport.clientHeight
-            aboutDiv.style.transform = delta < 0 ?
-                'translateY(' + delta + 'px) translateZ(0)' :
-                'translateZ(0)'
-            window.requestAnimationFrame(moveAboutDiv)
+        if (!md.phone() || !isFirefox) {
+            function moveAboutDiv() {
+                var delta = viewport.scrollTop - viewport.clientHeight
+                aboutDiv.style.transform = delta < 0 ?
+                    'translateY(' + delta + 'px) translateZ(0)' :
+                    'translateZ(0)'
+                window.requestAnimationFrame(moveAboutDiv)
+            }
+            moveAboutDiv()
         }
-        moveAboutDiv()
 
         var isFirefox = typeof InstallTrigger !== 'undefined';
         var md = new MobileDetect();
