@@ -188,6 +188,7 @@
         </footer>
     </div>
     <script type="text/javascript" src="./parallax-background-image/parallax-background-image.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.3/mobile-detect.min.js"></script>
     <script>
         var viewport = document.getElementById('viewport')
         var aboutDiv = document.getElementById('about')
@@ -202,8 +203,9 @@
         moveAboutDiv()
 
         var isFirefox = typeof InstallTrigger !== 'undefined';
+        var md = new MobileDetect();
         var parallax = new Parallax(viewport)
-        if (!isFirefox) {
+        if (!md.phone() && !isFirefox) {
             parallax.add('.interest:not(#open)', 0.3)
             parallax.add('#open', 0.9)
         }
