@@ -33,12 +33,17 @@
     </script>
 
     <link rel="stylesheet" type="text/css" href="style.css">
-
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            overflow-y: scroll;
+        }
+    </style>
 
 </head>
 
 <body>
-    <div id="viewport">
         <!--[if lt IE 9]>
             <div class="page-warning">
                 <div class="content">這個網頁使用高等CSS，只支援 Internet Explorer 9 或更高。抱歉！</div>
@@ -47,7 +52,7 @@
 
         <!-- Header -->
 
-        <div id="cover">
+        <div id="first">
             <img src="img/head.png">
             <div>
                 <h1 class="needfade">
@@ -89,7 +94,7 @@
                     <span class="needfade"><br> 所屬：屬扶桑皇國海軍岩川基地</span>
                     <span class="needfade"><br> 軍銜：少将</span>
                     <span class="needfade"><br> 駕駛機型：九試単座戦闘機、零式水上觀測機</span>
-                    <span class="needfade"><br>人物設定：亞莓</span> ╱ <del>CV：千葉紗子</del>
+                    <span class="needfade"><br><del>CV：千葉紗子</del></span>
                 </p>
             </div>
         </section>
@@ -98,32 +103,32 @@
             <div class="interest" id="design">
                 <div class="interest-text">
                     <h2 class="needfade">設計</h2>
-                    <p class="needfade">見習設計師。挺喜歡有設計感的東東，正在練習平面設計與UX/UI設計（躺平</p>
+                    <p class="needfade">見習設計師。挺喜歡有設計感的東東，正在練習平面設計w</p>
                 </div>
             </div>
             <div class="interest" id="travel">
                 <div class="interest-text">
                     <h2 class="needfade">旅行</h2>
-                    <p class="needfade">非常喜歡旅行！台灣本島幾乎都跑遍了，喜歡看每個地方不同的夜景。總之很喜歡到處跑來跑去，感受不同的生活氣氛。<br></p>
+                    <p class="needfade">非常喜歡旅行！很喜歡到處跑來跑去，看看不一樣的景色。<br></p>
                     <h3 class="needfade">遊記：<br><a href="http://akira.eu.org/c90.html">COMIKET 90 &amp; 關東</a></h3>
                 </div>
             </div>
             <div class="interest" id="model">
                 <div class="interest-text">
                     <h2 class="needfade">模型</h2>
-                    <p class="needfade">台大模型社。喜歡做精緻的模型，主要做1/700的二戰船模，以及1/72的二戰飛機。<br>最喜歡航空母艦！</p>
+                    <p class="needfade">台大模型社。很喜歡做精緻的模型，主要做1/700的二戰船模，以及1/72的二戰飛機。最喜歡航空母艦！</p>
                 </div>
             </div>
             <div class="interest" id="photograph">
                 <div class="interest-text">
                     <h2 class="needfade">攝影</h2>
-                    <p class="needfade">正在存錢錢買好一點的相機ww，喜歡記錄下漂亮的景色。因為目前的相機性能不足，相片後製技術倒是不錯(ry</p>
+                    <p class="needfade">正在存錢錢買好一點的相機ww，喜歡記錄下漂亮的景色。因為沒有好相機，反而是相片後製技術比較強(ry</p>
                 </div>
             </div>
             <div class="interest" id="doujin">
                 <div class="interest-text">
                     <h2 class="needfade">同人活動</h2>
-                    <p class="needfade">二創愛好者！常常可以在FF看到我（欸<br>
+                    <p class="needfade">二創愛好者！常常可以在FF看到我喔（欸<br>
                     </p>
                 </div>
             </div>
@@ -156,21 +161,6 @@
                     </p>
                 </div>
             </div>
-            <div class="interest" id="desk">
-                <div class="interest-text">
-                    <h2 class="needfade">Workspace</h2>
-                    <p class="needfade">作業環境：<br> iMac <span style="font-weight:100;">27 英寸，2011 年中</span>
-                        <br> Sony VAIO sz <span style="font-weight:100;">，2006 年 11 月</span>
-                    </p>
-                </div>
-            </div>
-            <div class="interest" id="room">
-                <div class="interest-text">
-                    <h2 class="needfade">Room</h2>
-                    <p class="needfade">自行設計，工時約 4 個月。<br>
-                    </p>
-                </div>
-            </div>
         </section>
 
         <footer>
@@ -186,10 +176,9 @@
                 <p class="needfade">Made with ♥ and <a href="https://code.visualstudio.com/" target="_newtab" id="vs">Visual Studio Code</a></p>
             </div>
         </footer>
-    </div>
-    <script type="text/javascript" src="./parallax-background-image/parallax-background-image.js"></script>
+    <script type="text/javascript" src="../parallax-background-image/parallax-background-image.js"></script>
     <script>
-        var viewport = document.getElementById('viewport')
+        var viewport = document.body
         var aboutDiv = document.getElementById('about')
 
         function moveAboutDiv() {
@@ -201,12 +190,9 @@
         }
         moveAboutDiv()
 
-        var isFirefox = typeof InstallTrigger !== 'undefined';
         var parallax = new Parallax(viewport)
-        if (!isFirefox) {
-            parallax.add('.interest:not(#open)', 0.3)
-            parallax.add('#open', 0.9)
-        }
+        parallax.add('.interest:not(#open)', 0.3)
+        parallax.add('#open', 0.9)
 
         function fadeIn() {
             var elements = document.querySelectorAll('.needfade')
