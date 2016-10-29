@@ -203,7 +203,7 @@
         moveAboutDiv()
 
         var isFirefox = typeof InstallTrigger !== 'undefined';
-        var md = new MobileDetect();
+        var md = new MobileDetect(window.navigator.userAgent);
         var parallax = new Parallax(viewport)
         if (!md.phone() && !isFirefox) {
             parallax.add('.interest:not(#open)', 0.3)
