@@ -224,11 +224,12 @@ p {
 }
 
 #doujin {
-    background-image: url("./img/doujin.jpg")
+    background-image: url("./img/doujin.jpg");
 }
 
 #kancolle {
-    background-image: url("./img/kancolle.jpg")
+    background-image: url("./img/kancolle.jpg");
+    background-position-x: 80%;
 }
 
 #code {
@@ -248,8 +249,8 @@ p {
         -ms-flex-align: start;
         -ms-grid-row-align: flex-start;
         align-items: flex-start;
-        height: 600px;
-        max-height: 600px;
+        height: 400px;
+        max-height: 400px;
     }
     .interest-text {
         width: 100%;
