@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>千秋！</title>
-    <!--窩不會寫網頁OAQ不要看OAQQ拜託OAQQQ-->
+    <!--不要看髒code！OAQQ拜託饒了我OAQQQ-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -161,7 +161,7 @@
             <div class="interest" class="interest2" id="code">
                 <div class="interest-text">
                     <h2 class="needfade">Coding</h2>
-                    <p class="needfade">對寫程式還不是那麼的熟練，但是寫程式是很棒的偷懶技術（拖走），正在學習寫各種程式跟網頁。<br>目前擔任<del>機房巫女</del>網管。
+                    <p class="needfade">對高等程式語言還不是那麼的熟練，但是寫程式是很棒的偷懶技術（拖走），正在學習寫各種寫code跟網頁。<br>目前擔任<del>機房巫女</del>網管。
                     </p>
                 </div>
             </div>
@@ -220,12 +220,30 @@
         }
         moveAboutDiv()
 
+        /*
         var isFirefox = typeof InstallTrigger !== 'undefined';
         var md = new MobileDetect(window.navigator.userAgent);
         var parallax = new Parallax(viewport)
-        if (!md.phone() && !isFirefox) {
+            if (!md.phone() && !isFirefox) {
+                parallax.add('.interest:not(#open)', 0.3)
+                parallax.add('#open', 0.9)
+            }
+        */
+
+        var isChromium = window.chrome,
+            winNav = window.navigator,
+            vendorName = winNav.vendor,
+            isOpera = winNav.userAgent.indexOf("OPR") > -1,
+            isIEedge = winNav.userAgent.indexOf("Edge") > -1,
+            isIOSChrome = winNav.userAgent.match("CriOS");
+
+        if (isIOSChrome) {
+            // is Google Chrome on IOS
+        } else if (isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false) {
             parallax.add('.interest:not(#open)', 0.3)
             parallax.add('#open', 0.9)
+        } else {
+            // not Google Chrome 
         }
 
         function fadeIn() {
