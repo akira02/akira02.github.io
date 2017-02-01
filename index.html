@@ -238,14 +238,14 @@
             isIEedge = winNav.userAgent.indexOf("Edge") > -1,
             isIOSChrome = winNav.userAgent.match("CriOS");
 
-        if (isIOSChrome) {
+        //if (isIOSChrome) {
             // is Google Chrome on IOS
-        } else if (isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false) {
+        //} else if (isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false) {
             parallax.add('.interest:not(#open)', 0.3)
             parallax.add('#open', 0.9)
-        } else {
+        //} else {
             // not Google Chrome 
-        }
+        //}
 
         function fadeIn() {
             var elements = document.querySelectorAll('.needfade')
