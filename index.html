@@ -193,12 +193,9 @@
         }
         moveAboutDiv()
         
-        if (navigator.userAgent.indexOf('Chrome/') != -1) {
-            var parallax = new Parallax(viewport)
-
-            parallax.add('.interest:not(#open)', { velocityScale: 0.3 })
-            parallax.add('#open', { velocityScale: 0.9 })
-        }
+        var parallax = new Parallax(viewport)
+        parallax.add('.interest:not(#open)', { velocityScale: 0.3 })
+        parallax.add('#open', { velocityScale: 0.9 })
 
         function fadeIn() {
             var elements = document.querySelectorAll('.needfade')
