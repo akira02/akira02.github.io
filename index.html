@@ -182,29 +182,37 @@
     <script type="text/javascript" src="./parallax-background-image/parallax-background-image.min.js"></script>
     <script>
         var viewport = document.getElementById('viewport')
+                      
+        var parallax = new Parallax(viewport)
+        parallax.add('.interest:not(#open)', { velocityScale: 0.3 })
+        parallax.add('#open', { velocityScale: 0.9 })
+        
+        var scheduler = Parallax.scheduler
+
         var aboutDiv = document.getElementById('about')
 
         function moveAboutDiv() {
             var delta = viewport.scrollTop - viewport.clientHeight
-            aboutDiv.style.transform = delta < 0 ?
-                'translateY(' + delta + 'px) translateZ(0)' :
-                'translateZ(0)'
-            window.requestAnimationFrame(moveAboutDiv)
+            scheduler.write(() => {
+                aboutDiv.style.transform = delta < 0 ?
+                    'translateY(' + delta + 'px) translateZ(0)' :
+                    'translateZ(0)'
+            })
+            scheduler.read(moveAboutDiv)
         }
         moveAboutDiv()
         
-        var parallax = new Parallax(viewport)
-        parallax.add('.interest:not(#open)', { velocityScale: 0.3 })
-        parallax.add('#open', { velocityScale: 0.9 })
-
         function fadeIn() {
-            var elements = document.querySelectorAll('.needfade')
-            for (var i = 0; i < elements.length; i++) {
-                if (elements[i].getBoundingClientRect().top < viewport.getBoundingClientRect().bottom) {
-                    elements[i].classList.add("fade")
+            var elements = Array.prototype.slice.call(document.querySelectorAll('.needfade'))
+            elements.forEach(element => {
+                if (element.getBoundingClientRect().top < viewport.getBoundingClientRect().bottom) {
+                    scheduler.write(() => {
+                        element.classList.add("fade")
+                    })
                 }
-            }
-            window.requestAnimationFrame(fadeIn)
+            
+            })
+            scheduler.read(fadeIn)
         }
         fadeIn()
     </script>
