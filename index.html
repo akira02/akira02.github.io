@@ -182,11 +182,13 @@
     <script type="text/javascript" src="./parallax-background-image/parallax-background-image.min.js"></script>
     <script>
         var viewport = document.getElementById('viewport')
-                      
-        var parallax = new Parallax(viewport)
-        parallax.add('.interest:not(#open)', { velocityScale: 0.3 })
-        parallax.add('#open', { velocityScale: 0.9 })
-        
+
+        if (navigator.userAgent.indexOf('Chrome/') !== -1 && navigator.userAgent.indexOf('Edge/') === -1) {
+            var parallax = new Parallax(viewport)
+            parallax.add('.interest:not(#open)', { velocityScale: 0.3 })
+            parallax.add('#open', { velocityScale: 0.9 })
+        }
+
         var scheduler = Parallax.scheduler
 
         var aboutDiv = document.getElementById('about')
