@@ -190,31 +190,34 @@
         var scheduler = Parallax.scheduler
 
         var aboutDiv = document.getElementById('about')
-
+        
+        var delta = null
         function moveAboutDiv() {
-            var delta = viewport.scrollTop - viewport.clientHeight
-            scheduler.write(() => {
-                aboutDiv.style.transform = delta < 0 ?
-                    'translateY(' + delta + 'px) translateZ(0)' :
-                    'translateZ(0)'
-            })
+            var newDelta = Math.min(0, viewport.scrollTop - viewport.clientHeight)
+            if (newDelta !== delta) {
+                delta = newDelta
+                scheduler.write(() => {
+                    aboutDiv.style.transform = 'translateY(' + delta + 'px) translateZ(0)'
+                })
+            }
             scheduler.read(moveAboutDiv)
         }
         moveAboutDiv()
         
-        function fadeIn() {
-            var elements = Array.prototype.slice.call(document.querySelectorAll('.needfade'))
-            elements.forEach(element => {
+        var elements = Array.prototype.slice.call(document.querySelectorAll('.needfade'))
+        function fadeIn (element) {
+            function loop () {
                 if (element.getBoundingClientRect().top < viewport.getBoundingClientRect().bottom) {
                     scheduler.write(() => {
                         element.classList.add("fade")
                     })
+                } else {
+                    scheduler.read(loop)
                 }
-            
-            })
-            scheduler.read(fadeIn)
+            }
+            loop()
         }
-        fadeIn()
+        elements.forEach(fadeIn)
     </script>
     <script src="https://use.typekit.net/ahe2xzb.js"></script>
     <script>
