@@ -1,3 +1,6 @@
 [submodule "parallax-background-image"]
 	path = parallax-background-image
 	url = https://github.com/ray851107/parallax-background-image
+[submodule "dom-scheduler"]
+	path = dom-scheduler
+	url = https://github.com/ray851107/dom-scheduler

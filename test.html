@@ -22,7 +22,7 @@
     <meta property="og:image" content="/img/cover.jpg">
     <meta property="og:description" content="Hi,千秋です！">
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -40,8 +40,8 @@
             <img src="img/head.png">
             <div>
                 <h1 class="needfade">
-                    <span class="fade">Hi,</span><br>
-                    <span class="needlaterfade"><span style="font-weight: 900;">千秋</span><span style="white-space: nowrap;">です!</span></span>
+                    <span>Hi,</span><br>
+                    <span><span style="font-weight: 900;">千秋</span><span style="white-space: nowrap;">です!</span></span>
                 </h1>
             </div>
         </div>
@@ -178,19 +178,27 @@
             </div>
         </footer>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobx/3.0.2/mobx.umd.js"></script>
-    <script type="text/javascript" src="./parallax-background-image/parallax-background-image.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobx/3.0.2/mobx.umd.min.js"></script>
+    <script type="text/javascript" src="./dom-scheduler/dom-scheduler.min.js"></script>
+    <script type="text/javascript" src="./parallax-background-image/parallax-background-image.min.js"></script>
     <script>
         var viewport = document.getElementById('viewport')
-
         var parallax = new Parallax(viewport)
         parallax.add('.interest:not(#open)', { velocityScale: 0.3 })
         parallax.add('#open', { velocityScale: 0.9 })
 
-        var scheduler = Parallax.scheduler
+        var scheduler = domScheduler.scheduler
+
+        var COVER_BG = './img/background.jpg'
+        var coverBg = document.createElement('img')
+        coverBg.onload = () => {
+            var cover = document.getElementById('cover')
+            cover.style.backgroundImage = 'url(' + COVER_BG + ')'
+            cover.classList.add('cover-loaded')
+        }
+        coverBg.src = COVER_BG
 
         var aboutDiv = document.getElementById('about')
-        
         var delta = null
         function moveAboutDiv() {
             var newDelta = Math.min(0, viewport.scrollTop - viewport.clientHeight)

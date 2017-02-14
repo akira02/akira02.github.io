@@ -179,6 +179,7 @@
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobx/3.0.2/mobx.umd.min.js"></script>
+    <script type="text/javascript" src="./dom-scheduler/dom-scheduler.min.js"></script>
     <script type="text/javascript" src="./parallax-background-image/parallax-background-image.min.js"></script>
     <script>
         var viewport = document.getElementById('viewport')
@@ -186,7 +187,7 @@
         parallax.add('.interest:not(#open)', { velocityScale: 0.3 })
         parallax.add('#open', { velocityScale: 0.9 })
 
-        var scheduler = Parallax.scheduler
+        var scheduler = domScheduler.scheduler
 
         var COVER_BG = './img/background.jpg'
         var coverBg = document.createElement('img')
