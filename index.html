@@ -118,8 +118,10 @@
             </div>
             <div class="interest" id="fonts">
                 <div class="interest-text">
-                    <h2 class="needfade">字體</h2>
-                    <p class="needfade">文字，是感情、回憶、思想、知識的載體。因為文字這樣的特性，特別的喜歡字體，也參與許多開源字型專案。<br>
+                    <h2 class="needfade">以文字貢獻社會。</h2>
+                    <p class="needfade">自古以來，人類透過說話、使用文字，分享自己獲得的知識及想法。作為傳達資訊的方式，文字可以跨越時間和地點，富含強勁的力量。
+                        <br> 歷史上的人物、眾多的人們在思考什麼、想傳達什麼，文字是讓其得以傳達的貴重發明。因為文字這樣的特性，特別的喜歡字體，也參與許多開源字型專案。
+                        <br>
                     </p>
                     <h3 class="needfade"><a href="https://github.com/akira02/AkiraHandwritingFont/releases/">千秋手寫體</a></h3>
                 </div>
@@ -184,8 +186,12 @@
     <script>
         var viewport = document.getElementById('viewport')
         var parallax = new Parallax(viewport)
-        parallax.add('.interest:not(#open)', { velocityScale: 0.3 })
-        parallax.add('#open', { velocityScale: 0.9 })
+        parallax.add('.interest:not(#open)', {
+            velocityScale: 0.3
+        })
+        parallax.add('#open', {
+            velocityScale: 0.9
+        })
 
         var scheduler = domScheduler.scheduler
 
@@ -200,6 +206,7 @@
 
         var aboutDiv = document.getElementById('about')
         var delta = null
+
         function moveAboutDiv() {
             var newDelta = Math.min(0, viewport.scrollTop - viewport.clientHeight)
             if (newDelta !== delta) {
@@ -211,10 +218,11 @@
             scheduler.read(moveAboutDiv)
         }
         moveAboutDiv()
-        
+
         var elements = Array.prototype.slice.call(document.querySelectorAll('.needfade'))
-        function fadeIn (element) {
-            function loop () {
+
+        function fadeIn(element) {
+            function loop() {
                 if (element.getBoundingClientRect().top < viewport.getBoundingClientRect().bottom) {
                     scheduler.write(() => {
                         element.classList.add("fade")
