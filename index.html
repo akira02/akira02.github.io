@@ -184,7 +184,8 @@
     <script>
         var viewport = document.getElementById('viewport')
         var parallax = new Parallax(viewport)
-        parallax.add('.interest:not(#open)', { velocityScale: 0.3 })
+        parallax.add('.interest:not(#open):not(#kancolle)', { velocityScale: 0.3 })
+        parallax.add('#kancolle', { velocityScale: 0.3, horizontalAlign: 1 })
         parallax.add('#open', { velocityScale: 0.9 })
 
         var scheduler = domScheduler.scheduler
