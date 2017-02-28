@@ -8,7 +8,10 @@
 a,
 a:visited,
 a:hover,
-a:active {
+a:active,
+h1,
+h2,
+h3 {
     color: inherit;
     text-decoration: none;
     margin: 0;
@@ -17,7 +20,7 @@ a:active {
 
 .needfade {
     -webkit-transform: translate3d(0, 40px, 0);
-            transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
     opacity: 0;
     -webkit-transition: opacity 1s, -webkit-transform 1s;
     transition: opacity 1s, -webkit-transform 1s;
@@ -27,7 +30,7 @@ a:active {
 
 .wf-active .fade {
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
 }
 
@@ -77,7 +80,7 @@ p {
     opacity: 0;
 }
 
-#cover > * {
+#cover>* {
     position: relative;
 }
 
@@ -129,7 +132,7 @@ p {
 }
 
 #about-photo {
-    background-image: url("./img/photo.png");
+    background-image: url("./img/photo.jpg");
     background-size: cover;
     background-position: 54.25% 5%;
     height: 100vh;
@@ -226,7 +229,7 @@ p {
 }
 
 #design {
-    background-image: url("./img/design.png");
+    background-image: url("./img/design.jpg");
 }
 
 #travel {
@@ -256,7 +259,7 @@ p {
 }
 
 #code {
-    background-image: url("./img/coding.png");
+    background-image: url("./img/coding.jpg");
     background-position: 0 10%;
     width: 50%;
 }
