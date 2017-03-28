@@ -107,6 +107,7 @@
                 <div class="interest-text">
                     <h2 class="needfade">攝影</h2>
                     <p class="needfade">此時此刻，只存在於這個瞬間的事物，能透過相機捕捉下來，我想這就是攝影最吸引人的地方。正在存錢錢買好一點的相機，因為很愛拍夜景，但目前的相機性能不足。對於Ps修圖也略有研究。</p>
+                    <h3 class="needfade"><a href="https://www.flickr.com/photos/akira02/">flickr</a></h3>
                 </div>
             </div>
             <div class="interest" id="doujin">
@@ -187,15 +188,22 @@
     <script>
         var viewport = document.getElementById('viewport');
         var parallax = new Parallax(viewport);
-        parallax.add('.interest:not(#open):not(#kancolle)', { velocityScale: 0.3 });
-        parallax.add('#kancolle', { velocityScale: 0.3, horizontalAlign: 1 });
-        parallax.add('#open', { velocityScale: 0.9 });
+        parallax.add('.interest:not(#open):not(#kancolle)', {
+            velocityScale: 0.3
+        });
+        parallax.add('#kancolle', {
+            velocityScale: 0.3,
+            horizontalAlign: 1
+        });
+        parallax.add('#open', {
+            velocityScale: 0.9
+        });
 
         var scheduler = domScheduler.scheduler;
 
         var COVER_BG = './img/background.jpg';
         var coverBg = document.createElement('img');
-        coverBg.onload = function () {
+        coverBg.onload = function() {
             var cover = document.getElementById('cover');
             cover.style.backgroundImage = 'url(' + COVER_BG + ')';
             cover.classList.add('cover-loaded');
@@ -209,7 +217,7 @@
             var newDelta = Math.min(0, viewport.scrollTop - viewport.clientHeight);
             if (newDelta !== delta) {
                 delta = newDelta;
-                scheduler.write(function () {
+                scheduler.write(function() {
                     aboutDiv.style.transform = 'translateY(' + delta + 'px) translateZ(0)';
                 });
             }
@@ -222,7 +230,7 @@
         function fadeIn(element) {
             function loop() {
                 if (element.getBoundingClientRect().top < viewport.getBoundingClientRect().bottom) {
-                    scheduler.write(function () {
+                    scheduler.write(function() {
                         element.classList.add("fade");
                     });
                 } else {
