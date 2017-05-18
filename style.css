@@ -281,6 +281,7 @@ p {
     }
     .interest-text {
         width: 100%;
+        height: 100%;
         color: #000;
         background-color: rgba(255, 253, 251, 0.7);
     }
