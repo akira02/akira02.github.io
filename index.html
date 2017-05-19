@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <div id="viewport">
+    <div id="viewport" onscroll="scroll()">
         <!--[if lt IE 9]>
             <div class="page-warning">
                 <div class="content">這個網頁使用高等CSS，只支援 Internet Explorer 9 或更高。抱歉！</div>
@@ -38,7 +38,7 @@
 
         <div id="cover">
             <img src="img/head.png">
-            <div>
+            <div id="cover-text">
                 <h1 class="needfade">
                     <span>Hi,</span><br>
                     <span><span style="font-weight: 900;">千秋</span><span style="white-space: nowrap;">です!</span></span>
@@ -224,6 +224,12 @@
             scheduler.read(moveAboutDiv);
         }
         moveAboutDiv();
+
+        function scroll() {
+            scheduler.write(function() {
+                document.getElementById('cover-text').classList.add("scroll");
+            });
+        }
 
         var elements = Array.prototype.slice.call(document.querySelectorAll('.needfade'));
 
