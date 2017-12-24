@@ -12,14 +12,31 @@
     <meta name="copyright" content="八雲 千秋">
 
     <meta itemprop="name" content="AkiNixieNumberFont">
-    <meta itemprop="image" content="/img/NixieCover.jpg">
+    <meta itemprop="image" content="http://akira.eu.org/img/NixieCover.jpg">
     <meta itemprop="description" content="AkiNixieNumberFont">
 
     <meta property="og:title" content="AkiNixieNumberFont">
-    <meta property="og:image" content="/img/NixieCover.jpg">
+    <meta property="og:image" content="http://akira.eu.org/img/NixieCover.jpg">
     <meta property="og:description" content="AkiNixieNumberFont">
 
     <script>
+        var next = startTime
+
+        function main() {
+            next()
+            setTimeout(main, 50)
+        }
+
+        function changeAnim() {
+            if (next == startTime) {
+                next = makernd
+                setTimeout(changeAnim, 500)
+            } else {
+                next = startTime
+                setTimeout(changeAnim, 3000)
+            }
+        }
+
         function startTime() {
             var today = new Date();
             var a = "0";
@@ -32,7 +49,14 @@
             s = checkTime(s);
             document.getElementById('time').innerHTML =
                 a + "." + h + m + s;
-            var t = setTimeout(startTime, 500);
+        }
+
+        function makernd() {
+            var rnd = "";
+            var possible = "0123456789";
+            for (var i = 0; i < 6; i++)
+                rnd += possible.charAt(Math.floor(Math.random() * possible.length));
+            return document.getElementById('time').innerHTML = "0." + rnd;
         }
 
         function checkAm(a) {
@@ -51,7 +75,7 @@
     </script>
 </head>
 
-<body onload="startTime()">
+<body onload="main(),changeAnim()">
     <svg id="title" xmlns="http://www.w3.org/2000/svg" width="1190" height="180" viewBox="0 0 1190 180">
       <defs>
           <style>
@@ -118,7 +142,7 @@
         margin: 0.2em;
         padding-bottom: 0.1em;
         color: #ff9b28;
-        animation: shine 1s infinite;
+        animation: shine 0.17s infinite;
         padding: 20px;
         height: auto;
         text-shadow: 0px 0px 6px rgba(255, 65, 0, 0.7), 0px 0px 20px #ff8000, 0px 0px 10px rgb(118, 18, 3);
@@ -134,11 +158,11 @@
     
     @keyframes shine {
         0% {
-            color: #ff9b28;
+            color: #ff7728;
             text-shadow: 0px 0px 6px rgba(255, 65, 0, 0.7), 0px 0px 20px #ff8000, 0px 0px 10px rgb(118, 18, 3);
         }
         33% {
-            color: #ff7728;
+            color: #f57c37;
             text-shadow: 0px 0px 6px rgba(255, 65, 0, 0.7), 0px 0px 20px #ff8000, 0px 0px 10px rgb(118, 18, 3);
         }
         66% {
@@ -146,7 +170,7 @@
             text-shadow: 0px 0px 6px rgba(255, 65, 0, 0.7), 0px 0px 20px #ff8000, 0px 0px 10px rgb(118, 18, 3);
         }
         100% {
-            color: #ff9b28;
+            color: #ff7728;
             text-shadow: 0px 0px 6px rgba(255, 65, 0, 0.7), 0px 0px 20px #ff8000, 0px 0px 10px rgb(118, 18, 3);
         }
     }
