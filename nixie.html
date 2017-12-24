@@ -24,7 +24,11 @@
 
         function main() {
             next()
-            setTimeout(main, 50)
+            if (next == startTime) {
+                setTimeout(main, 500)
+            } else {
+                setTimeout(main, 50)
+            }
         }
 
         function changeAnim() {
