@@ -25,9 +25,9 @@
         function main() {
             next()
             if (next == startTime) {
-                setTimeout(main, 500)
+                requestAnimationFrame(main, 500)
             } else {
-                setTimeout(main, 50)
+                requestAnimationFrame(main, 50)
             }
         }
 
