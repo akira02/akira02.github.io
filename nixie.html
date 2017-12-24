@@ -34,10 +34,10 @@
         function changeAnim() {
             if (next == startTime) {
                 next = makernd
-                setTimeout(changeAnim, 500)
+                setTimeout(changeAnim, 500 + Math.random() * 200)
             } else {
                 next = startTime
-                setTimeout(changeAnim, 3000)
+                setTimeout(changeAnim, 3000 + Math.random() * 1000)
             }
         }
 
@@ -60,7 +60,7 @@
             var possible = "0123456789";
             for (var i = 0; i < 6; i++)
                 rnd += possible.charAt(Math.floor(Math.random() * possible.length));
-            return document.getElementById('time').innerHTML = "0." + rnd;
+            return document.getElementById('time').innerHTML = possible.charAt(Math.floor(Math.random() * possible.length)) + "." + rnd;
         }
 
         function checkAm(a) {
