@@ -51,7 +51,7 @@
             h = checkTime(h);
             m = checkTime(m);
             s = checkTime(s);
-            document.getElementById('time').innerHTML =
+            document.getElementById('time').innerText =
                 a + "." + h + m + s;
         }
 
@@ -60,7 +60,7 @@
             var possible = "0123456789";
             for (var i = 0; i < 6; i++)
                 rnd += possible.charAt(Math.floor(Math.random() * possible.length));
-            return document.getElementById('time').innerHTML = possible.charAt(Math.floor(Math.random() * possible.length)) + "." + rnd;
+            return document.getElementById('time').innerText = possible.charAt(Math.floor(Math.random() * possible.length)) + "." + rnd;
         }
 
         function checkAm(a) {
