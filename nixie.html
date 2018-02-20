@@ -95,13 +95,15 @@
     <a href="http://akira.eu.org/assets/AkiNixie.ttf" download="AkiNixie.ttf" class="button">
         <span>Download</span>
     </a>
+    <div id='show'>
+        Contains 0-9 numbers, and "$" Symble is for wire background. By 千秋 CC-BY-SA
+    </div>
 
 </body>
 <footer>
-    Contains 0-9 numbers, and "$" Symble is for wire background.<br>
     <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
         <img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
-    </a>この作品は <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</a>の下に提供されています。
+    </a>
 </footer>
 
 <style>
@@ -216,6 +218,7 @@
         overflow: hidden;
         transition: all 0.5s;
         box-shadow: 0px 0px 10px #cc5003;
+        background: rgba(0, 0, 0, 0);
     }
     
     .button:hover,
@@ -264,9 +267,22 @@
         top: 50%;
     }
     
+    #show {
+        position: absolute;
+        bottom: 40px;
+        opacity: 0;
+    }
+    
+    .button:hover~#show {
+        opacity: 0.5;
+        bottom: 20px;
+        transition: opacity 0.5s, bottom 0.5s;
+    }
+    
     footer {
         position: absolute;
         bottom: 20px;
+        right: 20px;
         opacity: 0.4;
     }
 </style>
