@@ -321,6 +321,10 @@ p {
     max-width: 2139px;
 }
 
+#select h2 {
+    margin: 0 40px 0 40px;
+}
+
 footer {
     margin: 0;
     display: -webkit-box;
