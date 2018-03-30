@@ -299,6 +299,28 @@ p {
     background-image: url("./img/room.jpg")
 }
 
+#select {
+    padding: 100px 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #27272c;
+    color: white;
+}
+
+#select img {
+    width: 95vw;
+    max-width: 2139px;
+}
+
 footer {
     margin: 0;
     display: -webkit-box;
