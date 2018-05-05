@@ -17,8 +17,8 @@
             </div>
             <div id="down">
             </div>
-            <div>
-                <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" transform="scale(0.5)" viewBox="0 0 461.5 460.5" enable-background="new 0 0 461.5 460.5" xml:space="preserve">
+            <div style="margin:10vh 0 10vh 0;text-align: center;">
+                <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="20px" y="0px" width="10vw" viewBox="0 0 461.5 460.5" enable-background="new 0 0 461.5 460.5" xml:space="preserve">
        <g>
            <g>
                <path fill="#fff" d="M251.6,199.9h207.9l-1.1-7.3C441.9,91.5,360.7,13.3,259,0.8L251.6,0v42.1l6.7,0.8
@@ -33,16 +33,18 @@
            </g>
        </g>
        </svg>
-                <h3 style="top:-4vw">
+                <h3>
                     <span class="small">35FPK </span>11203<span class="small"> ㄒ</span>
                 </h3>
             </div>
         </div>
         <div class="landing landing2">
-            <h2 style="top:25vh;">千秋制<br><span style="font-family:sans-serif;font-size:2vw;">臺鐵客貨車表記文字</span></h2>
+            <div style="height:43vh;">
+                <h2 style="margin-top:10vh;">千秋制<br><span style="font-family:sans-serif;font-size:2em;">臺鐵客貨車<br>表記文字</span></h2>
+            </div>
             <div id="down2">
             </div>
-            <h2 style="font-size:2.5vw;margin:5vh;top:40vh;">
+            <h2 style="font-size:2.5vw;margin:5vh;">
                 <br><br>
                 <a id="dl" href="http://akira.eu.org/assets/AkiTRA-Regular.otf" download="AkiTRA-Regular.otf" class="button">
                     <span>DOWNLOAD</span>
@@ -78,24 +80,12 @@
     h2 {
         font-family: akitra, sans-serif;
         position: relative;
+        font-size: 3.5em;
         margin: 0 auto;
         text-transform: uppercase;
         font-weight: 900;
-        font-size: 2.5vw;
         text-align: center;
         color: white;
-    }
-    
-    h2:before {
-        content: "";
-        height: 5px;
-        width: 0;
-        background-color: #000;
-        position: absolute;
-        bottom: -0.1vw;
-        transition: 500ms all ease-in-out;
-        left: 50%;
-        transform: translateX(-50%);
     }
     
     h3 {
@@ -124,11 +114,6 @@
         height: 100%;
         align-content: center;
         align-items: center;
-    }
-    
-    .landing:hover>h2:before {
-        background-color: #fff;
-        opacity: 1;
     }
     
     .landing1 {
@@ -168,8 +153,6 @@
     
     #down2 {
         background-color: white;
-        top: 43vh;
-        position: fixed;
         height: 5vh;
         width: 100%;
         align-self: baseline;
