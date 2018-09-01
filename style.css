@@ -110,12 +110,12 @@ p {
     align-content: center;
 }
 
-#cover img {
+#cover-img {
     width: 500px;
 }
 
 @media (max-width: 1010px) {
-    #cover img {
+    #cover-img {
         width: 70vw;
     }
 }
