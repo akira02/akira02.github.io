@@ -51,28 +51,28 @@
                 document.getElementById('titledown').data = 'img/titledown_cool.svg'
             }
         </script>
-
-        <section id="about">
-            <div id="about-photo"></div>
-            <div id="about-text">
-                <h2>八雲 千秋</h2>
-                <h3>Designer</h3>
-                <p>
-                    據說是個有趣的神奇傢伙，信念是「可愛就是正義！」<br>
-                    <br> 喜歡萌物到無可救藥的地步，也很喜歡有設計感的東西，以及精采的故事。特殊才能是字體設計跟占卜（？
-                    <br>
-                    <br> 常常興起有趣的想法就很熱血的去行動。從設計、插畫、料理、攝影到機械、程式都略有涉獵，最喜歡做的事情就是找事情做。主修經濟學，也正在學習認知神經科學、哲學、畜產學。
-                    <br>
-                    <br> 小時候學做了一台收音機開始，就對於機械、電腦都非常有興趣。喜歡萌萌的人工智慧，目標是做出萌萌的女僕。
-                    <br>
-                    <br> 目前的副業是見習設計師、見習編輯、見習網管，
-                    <br> 實際上是學生。<br><br>
-                    <a href="https://www.facebook.com/akira002" style="color:#3b5998;">#facebook</a>&nbsp;&nbsp;
-                    <a href="http://plurk.com/akira02" style="color:#d44840;">#Plurk</a>
-                </p>
-            </div>
-        </section>
-
+        <div id="about-wrapper">
+            <section id="about">
+                <div id="about-photo"></div>
+                <div id="about-text">
+                    <h2>八雲 千秋</h2>
+                    <h3>Designer</h3>
+                    <p>
+                        據說是個有趣的神奇傢伙，信念是「可愛就是正義！」<br>
+                        <br> 喜歡萌物到無可救藥的地步，也很喜歡有設計感的東西，以及精采的故事。特殊才能是字體設計跟占卜（？
+                        <br>
+                        <br> 常常興起有趣的想法就很熱血的去行動。從設計、插畫、料理、攝影到機械、程式都略有涉獵，最喜歡做的事情就是找事情做。主修經濟學，也正在學習認知神經科學、哲學、畜產學。
+                        <br>
+                        <br> 小時候學做了一台收音機開始，就對於機械、電腦都非常有興趣。喜歡萌萌的人工智慧，目標是做出萌萌的女僕。
+                        <br>
+                        <br> 目前的副業是見習設計師、見習編輯、見習網管，
+                        <br> 實際上是學生。<br><br>
+                        <a href="https://www.facebook.com/akira002" style="color:#3b5998;">#facebook</a>&nbsp;&nbsp;
+                        <a href="http://plurk.com/akira02" style="color:#d44840;">#Plurk</a>
+                    </p>
+                </div>
+            </section>
+        </div>
         <section id="avatar">
             <img src="img/pic.jpg">
             <div>
@@ -225,21 +225,6 @@
             cover.classList.add('cover-loaded');
         };
         coverBg.src = COVER_BG;
-
-        var aboutDiv = document.getElementById('about');
-        var delta = null;
-
-        function moveAboutDiv() {
-            var newDelta = Math.min(0, viewport.scrollTop - viewport.clientHeight);
-            if (newDelta !== delta) {
-                delta = newDelta;
-                scheduler.write(function() {
-                    aboutDiv.style.transform = 'translateY(' + delta + 'px) translateZ(0)';
-                });
-            }
-            scheduler.read(moveAboutDiv);
-        }
-        moveAboutDiv();
 
         function scroll() {
             scheduler.write(function() {
