@@ -39,16 +39,16 @@
         <div id="cover">
             <img id="cover-img" src="img/head.png">
             <div id="cover-text">
-                <img id="titleup" src="img/titleup.png" alt="千秋設計所">
-                <img id="titledown" class="needfade" width="105%" src="" alt="八雲千秋">
+                <img id="titleup" class="needfade" src="img/titleup.png" alt="千秋設計所">
+                <object id="titledown" width="105%" type="image/svg+xml" data="" alt="八雲千秋" />
             </div>
         </div>
         <script>
             var ref = document.referrer
             if (ref.match(/^https?:\/\/([^\/]+\.)?plurk\.com(\/|$)/i)) {
-                document.getElementById('titledown').src = 'img/titledown_cute.svg'
+                document.getElementById('titledown').data = 'img/titledown_cute.svg'
             } else {
-                document.getElementById('titledown').src = 'img/titledown_cool.svg'
+                document.getElementById('titledown').data = 'img/titledown_cool.svg'
             }
         </script>
 
