@@ -114,6 +114,10 @@ p {
     width: 500px;
 }
 
+#cover-text {
+    width: 870px;
+}
+
 @media (max-width: 1010px) {
     #cover-img {
         width: 70vw;
