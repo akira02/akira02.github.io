@@ -25,10 +25,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script>
-        var ref = document.referrer
-        if (ref.match(/^https?:\/\/([^\/]+\.)?plurk\.com(\/|$)/i)) {
-            document.getElementById('webtitle').src = 'img/webtitle_plurk.png'
-        }
     </script>
 </head>
 
@@ -199,6 +195,11 @@
     <script src="https://cdn.rawgit.com/ray851107/dom-scheduler/v1.0.2/dom-scheduler.min.js"></script>
     <script src="./parallax-background-image/parallax-background-image.min.js"></script>
     <script>
+        var ref = document.referrer
+        if (ref.match(/^https?:\/\/([^\/]+\.)?plurk\.com(\/|$)/i)) {
+            document.getElementById('webtitle').src = 'img/webtitle_plurk.png'
+        }
+
         var viewport = document.getElementById('viewport');
         var parallax = new Parallax(viewport);
         parallax.add('.interest:not(#open):not(#kancolle)', {
