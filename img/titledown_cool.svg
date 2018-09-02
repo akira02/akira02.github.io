@@ -28,9 +28,9 @@
 </path><path class="cls-2 pgzVaNGc_26" d="M761.66,70.41a2.51,2.51,0,0,0,.4,3.1,6.7,6.7,0,0,0,3,1.58,51.68,51.68,0,0,0,17.3,2.39" transform="translate(-52.75 -18.72)">
 </path></mask>
 <linearGradient id="a1" x1="0%" y1="0%" x2="0%" y2="100%">
-     <stop offset="40%" stop-color="#4ea1f3" />
-     <stop offset="50%" stop-color="#9eba95" />
-     <stop offset="70%" stop-color="#eed548" />
+     <stop offset="50%" stop-color="rgb(83,170,255)" />
+     <stop offset="60%" stop-color="rgb(171,204,171)" />
+     <stop offset="75%" stop-color="rgb(255,221,75)" />
 </linearGradient>
 <style>.cls-2{fill:none;stroke:white;stroke-linecap:round;stroke-linejoin:round;stroke-width:15px;}</style>
 </defs><title>1</title>
