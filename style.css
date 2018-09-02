@@ -112,15 +112,28 @@ p {
 
 #cover-img {
     width: 500px;
+    max-width: 70vw;
 }
 
 #cover-text {
-    width: 870px;
+    width: 80vw;
+    margin-top: 10%;
 }
 
-@media (max-width: 1010px) {
-    #cover-img {
-        width: 70vw;
+#titleup {
+    max-width: 80vw;
+}
+
+#titledown {
+    max-width: 80vw;
+    width: 865.19px;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    #cover-text {
+        max-width: 865.19px;
+        margin-top: 20px;
     }
 }
 
