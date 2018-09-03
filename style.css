@@ -63,7 +63,7 @@ p {
 }
 
 #cover::before {
-    content: ' ';
+    content: '';
     display: block;
     position: absolute;
     top: 0;
@@ -89,10 +89,11 @@ p {
     z-index: 1;
     height: 100vh;
     background-image: url("./img/background.jpg");
-    background-attachment: fixed;
     background-size: cover;
     background-color: #fff;
     background-position: 50% 30%;
+    -webkit-tranform: translateZ(0);
+    transform: translateZ(0);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

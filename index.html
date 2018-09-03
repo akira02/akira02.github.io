@@ -221,7 +221,6 @@
         var coverBg = document.createElement('img');
         coverBg.onload = function() {
             var cover = document.getElementById('cover');
-            cover.style.backgroundImage = 'url(' + COVER_BG + ')';
             cover.classList.add('cover-loaded');
         };
         coverBg.src = COVER_BG;
