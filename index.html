@@ -228,7 +228,7 @@
     <script>
         var viewport = document.getElementById('viewport');
         var parallax = new Parallax(viewport);
-        parallax.add('.interest-img', {
+        parallax.add('.interest-img:not(#kancolle)', {
             velocityScale: 0.5
         });
         parallax.add('#kancolle', {
