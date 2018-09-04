@@ -63,7 +63,7 @@ p {
 }
 
 #cover::before {
-    content: ' ';
+    content: '';
     display: block;
     position: absolute;
     top: 0;
@@ -86,15 +86,14 @@ p {
 
 #cover {
     position: relative;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
     z-index: 1;
     height: 100vh;
     background-image: url("./img/background.jpg");
-    background-attachment: fixed;
     background-size: cover;
     background-color: #fff;
     background-position: 50% 30%;
+    -webkit-tranform: translateZ(0);
+    transform: translateZ(0);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -137,7 +136,20 @@ p {
     }
 }
 
+#about-wrapper {
+    margin-top: -100vh;
+}
+
+#about-wrapper::after {
+    content: '';
+    display: block;
+    height: 100vh;
+}
+
 #about {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     min-height: 100vh;
     background-color: #ffeded;
     display: -webkit-box;
@@ -154,6 +166,7 @@ p {
     background-position: 54.25% 5%;
     height: 100vh;
     width: 60vw;
+    transform: translateZ(0);
 }
 
 #about-text {
@@ -200,7 +213,8 @@ p {
     height: 80vw;
     max-height: 300px;
     border-radius: 50%;
-    padding: 30px;
+    margin: 30px;
+    transform: translateZ(0);
 }
 
 #interests {
@@ -340,6 +354,7 @@ p {
 #select img {
     width: 95vw;
     max-width: 2139px;
+    transform: translateZ(0);
 }
 
 #select h2 {
