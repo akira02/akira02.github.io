@@ -229,8 +229,6 @@ p {
     height: 30vw;
     max-height: 800px;
     width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -240,12 +238,29 @@ p {
     background-position: center;
 }
 
+.interest-img {
+    width: 70%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
 .interest-text {
     color: #fff;
     background-color: rgba(159, 53, 58, 0.9);
-    padding: 2em;
     width: 30%;
-    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.63);
+    height: 100%;
+    display: flex;
+    align-self: center;
+}
+
+.interest-text>* {
+    margin: 2em;
+    align-self: center;
 }
 
 .interest:nth-child(2n+1) {
@@ -258,6 +273,7 @@ p {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    flex-direction: row-reverse;
 }
 
 #design {
@@ -296,13 +312,10 @@ p {
 
 #code {
     background-image: url("./img/coding.jpg");
-    background-position: 0 10%;
-    width: 50%;
 }
 
 #open {
     background-image: url("./img/open.jpg");
-    width: 50%;
 }
 
 @media (max-width: 1010px) {
