@@ -398,7 +398,7 @@ footer {
     white-space: nowrap;
 }
 
-footer img {
+#contact_img {
     position: relative;
     margin-left: -100px;
     padding-left: 20vw;
@@ -432,7 +432,7 @@ footer h3 {
 
 footer p {
     padding-left: 1vmax;
-    margin-top: 20px;
+    margin: 20px 0 0 0;
 }
 
 #vs {
