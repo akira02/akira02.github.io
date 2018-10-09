@@ -29,7 +29,7 @@ p {
     transition: transform 1s, opacity 1s, -webkit-transform 1s;
 }
 
-.wf-active .fade {
+.fade {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     opacity: 1;
