@@ -20,19 +20,14 @@ p {
 }
 
 .needfade {
-    -webkit-transform: translate3d(0, 40px, 0);
     transform: translate3d(0, 40px, 0);
-    opacity: 0;
-    -webkit-transition: opacity 1s, -webkit-transform 1s;
-    transition: opacity 1s, -webkit-transform 1s;
-    transition: transform 1s, opacity 1s;
-    transition: transform 1s, opacity 1s, -webkit-transform 1s;
+    filter: opacity(0);
+    transition: transform 1s, filter 1s;
 }
 
 .fade {
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    opacity: 1;
+    filter: opacity(1);
 }
 
 h1 {
