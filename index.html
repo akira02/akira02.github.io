@@ -234,8 +234,6 @@
         viewport.add('.interest-img:not(#kancolle)', { velocity: 0.5 });
         viewport.add('#kancolle', { velocity: 0.3, alignX: 'right' });
 
-        var scheduler = domScheduler.scheduler;
-
         var COVER_BG = './img/background.jpg';
         var coverBg = document.createElement('img');
         coverBg.onload = function() {
@@ -244,12 +242,7 @@
         };
         coverBg.src = COVER_BG;
 
-        function scroll() {
-            scheduler.write(function() {
-                document.getElementById('cover-text').classList.add("scroll");
-            });
-        }
-
+        var scheduler = domScheduler.scheduler;
         var elements = Array.prototype.slice.call(document.querySelectorAll('.needfade'));
 
         function fadeIn(element) {
