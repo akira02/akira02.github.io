@@ -1,280 +1,404 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="zh-tw">
-<!--不要看髒code！OAQQ拜託饒了我OAQQQ-->
+  <!--不要看髒code！OAQQ拜託饒了我OAQQQ-->
 
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>千秋！</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
     <!-- Meta Tags -->
-    <meta name="author" content="千秋">
-    <meta name="copyright" content="八雲 千秋">
+    <meta name="author" content="千秋" />
+    <meta name="copyright" content="八雲 千秋" />
 
-    <meta itemprop="name" content="千秋！">
-    <meta itemprop="image" content="/img/cover.jpg">
-    <meta itemprop="description" content="Hi,千秋です！">
+    <meta itemprop="name" content="千秋！" />
+    <meta itemprop="image" content="/img/cover.jpg" />
+    <meta itemprop="description" content="Hi,千秋です！" />
 
-    <meta property="og:title" content="千秋！">
-    <meta property="og:url" content="網址">
-    <meta property="og:image" content="/img/cover.jpg">
-    <meta property="og:description" content="Hi,千秋です！">
+    <meta property="og:title" content="千秋！" />
+    <meta property="og:url" content="網址" />
+    <meta property="og:image" content="/img/cover.jpg" />
+    <meta property="og:description" content="Hi,千秋です！" />
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <div id="viewport">
-        <!--[if lt IE 9]>
-            <div class="page-warning">
-                <div class="content">這個網頁使用高等CSS，只支援 Internet Explorer 9 或更高。抱歉！</div>
-            </div>
-            <![endif]-->
-
-        <!-- Header -->
-
-        <div id="cover">
-            <img id="cover-img" src="img/head.png">
-            <div id="cover-text">
-                <img id="titleup" src="img/titleup.png" alt="千秋設計所">
-                <object id="titledown" width="105%" type="image/svg+xml" style="transform: translateZ(0);" data="" alt="八雲千秋"></object>
-            </div>
+      <!--[if lt IE 9]>
+        <div class="page-warning">
+          <div class="content">
+            這個網頁使用高等CSS，只支援 Internet Explorer 9 或更高。抱歉！
+          </div>
         </div>
-        <script>
-            var ref = document.referrer
-            if (ref.match(/^https?:\/\/([^\/]+\.)?plurk\.com(\/|$)/i)) {
-                document.getElementById('titledown').data = 'img/titledown_cute.svg'
-            } else {
-                document.getElementById('titledown').data = 'img/titledown.svg'
-            }
-        </script>
-        <div id="about-wrapper">
-            <section id="about">
-                <div id="about-photo"></div>
-                <div id="about-text">
-                    <h2>八雲 千秋</h2>
-                    <h3>Designer</h3>
-                    <p>
-                        據說是個有趣的神奇傢伙，信念是「可愛就是正義！」<br>
-                        <br> 喜歡萌物到無可救藥的地步，也很喜歡有設計感的東西，以及精采的故事。特殊才能是字體設計跟占卜（？
-                        <br>
-                        <br> 常常興起有趣的想法就很熱血的去行動。從設計、插畫、料理、攝影到機械、程式都略有涉獵，最喜歡做的事情就是找事情做。主修經濟學，也正在學習認知神經科學、哲學、畜產學。
-                        <br>
-                        <br> 小時候學做了一台收音機開始，就對於機械、電腦都非常有興趣。喜歡萌萌的人工智慧，目標是做出萌萌的女僕。
-                        <br>
-                        <br> 目前的副業是見習設計師、見習編輯、見習網管，
-                        <br> 實際上是學生。<br><br>
-                    </p>
-                </div>
-            </section>
+      <![endif]-->
+
+      <!-- Header -->
+
+      <div id="cover">
+        <img id="cover-img" src="img/head.png" />
+        <div id="cover-text">
+          <img id="titleup" src="img/titleup.png" alt="千秋設計所" />
+          <object
+            id="titledown"
+            width="105%"
+            type="image/svg+xml"
+            style="transform: translateZ(0);"
+            data=""
+            alt="八雲千秋"></object>
         </div>
-        <section id="avatar">
-            <img src="img/pic.jpg">
-            <div class="needfade">
-                <h2>八雲 秋狐</h2>
-                <p>
-                    千秋 in 二次元計畫的看板娘<br>
-                    <br>
-                    固有魔法：幸運<br>
-                    使魔：赤狐<br>
-                    所屬：屬扶桑皇國海軍岩川基地<br>
-                    軍銜：少将<br>
-                    駕駛機型：九試単座戦闘機、零式水上觀測機<br>
-                    人物設定：亞莓 ╱ <del>CV：千葉紗子</del>
-                </p>
-            </div>
+      </div>
+      <script>
+        var ref = document.referrer;
+        if (ref.match(/^https?:\/\/([^\/]+\.)?plurk\.com(\/|$)/i)) {
+          document.getElementById('titledown').data = 'img/titledown_cute.svg';
+        } else {
+          document.getElementById('titledown').data = 'img/titledown.svg';
+        }
+      </script>
+      <div id="about-wrapper">
+        <section id="about">
+          <div id="about-photo"></div>
+          <div id="about-text">
+            <h2>八雲 千秋</h2>
+            <h3>Designer</h3>
+            <p>
+              據說是個有趣的神奇傢伙，信念是「可愛就是正義！」
+              <br />
+              <br />
+              喜歡萌物到無可救藥的地步，也很喜歡有設計感的東西，以及精采的故事。特殊才能是字體設計跟占卜（？
+              <br />
+              <br />
+              常常興起有趣的想法就很熱血的去行動。從設計、插畫、料理、攝影到機械、程式都略有涉獵，最喜歡做的事情就是找事情做。主修經濟學，也正在學習認知神經科學、哲學、畜產學。
+              <br />
+              <br />
+              小時候學做了一台收音機開始，就對於機械、電腦都非常有興趣。喜歡萌萌的人工智慧，目標是做出萌萌的女僕。
+              <br />
+              <br />
+              目前的副業是見習設計師、見習編輯、見習網管，
+              <br />
+              實際上是學生。
+              <br />
+              <br />
+            </p>
+          </div>
         </section>
+      </div>
+      <section id="avatar">
+        <img src="img/pic.jpg" />
+        <div class="needfade">
+          <h2>八雲 秋狐</h2>
+          <p>
+            千秋 in 二次元計畫的看板娘
+            <br />
+            <br />
+            固有魔法：幸運
+            <br />
+            使魔：赤狐
+            <br />
+            所屬：屬扶桑皇國海軍岩川基地
+            <br />
+            軍銜：少将
+            <br />
+            駕駛機型：九試単座戦闘機、零式水上觀測機
+            <br />
+            人物設定：亞莓 ╱
+            <del>CV：千葉紗子</del>
+          </p>
+        </div>
+      </section>
 
-        <section id="interests">
-            <div class="interest">
-                <div class="interest-img" id="design">
-                    <h2 class="needfade">設計</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">設計與思考，能成為改變世界的力量。以人為本，思考機能性與美觀兼具的設計。<br>見習設計師。喜歡設計感的巧思，正在練習平面設計與UX/UI設計，希望能帶來一個更美麗的世界。</p>
-                </div>
-            </div>
-            <div class="interest">
-                <div class="interest-img" id="desk">
-                    <h2 class="needfade">Works</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">UI/UX設計師，平面設計師
-                        <br>接受設計委託、系統架設或各式諮詢。
-                    </p>
-                </div>
-            </div>
-            <div class="interest">
-                <div class="interest-img" id="travel">
-                    <h2 class="needfade">旅行</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">研究路線，探索新的地區，不同的文化體驗，是旅行最吸引人的地方。喜歡看每個地方不同的夜景，吃好吃的地方美食。總之很喜歡到處跑來跑去，感受不同的生活氣氛。<br></p>
-                    <h3 class="needfade">遊記：<br><a href="http://akira.eu.org/c90.html">COMIKET 90 &amp; 關東</a></h3>
-                </div>
-            </div>
-            <div class="interest">
-                <div class="interest-img" id="model">
-                    <h2 class="needfade">模型</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">現為台大模型社，喜歡做精緻的模型，在極小的比例下，表現出濃縮的力與美。主要做1/700的二戰船模，以及1/72的二戰飛機。<br>最喜歡航空母艦！</p>
-                </div>
-            </div>
-            <div class="interest">
-                <div class="interest-img" id="photograph">
-                    <h2 class="needfade">攝影</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">此時此刻，只存在於這個瞬間的事物，能透過相機捕捉下來，我想這就是攝影最吸引人的地方。正在存錢錢買好一點的相機，因為很愛拍夜景，但目前的相機性能不足。對於Ps修圖也略有研究。</p>
-                    <h3 class="needfade"><a href="https://www.flickr.com/photos/akira02/">flickr</a></h3>
-                </div>
-            </div>
-            <div class="interest">
-                <div class="interest-img" id="doujin">
-                    <h2 class="needfade">同人活動</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">「<ruby>どうじん<rt>相同志向的人們、同好</rt></ruby>」，是動漫文化的用詞，類似獨立製作，有著不受商業限制，更大的創作自由度。能在會場直接販賣自己創作的同人誌，並與讀者作出交流，是令人感動的活動。<br>因此常常可以在FF等同人展看到我喔！<br>
-                    </p>
-                </div>
-            </div>
-            <div class="interest">
-                <div class="interest-img" id="cos">
-                    <h2 class="needfade">Cosplay</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">「<ruby>コスプレ<rt>角色扮演</rt></ruby>」，正如同二創作者以創作來表達自己對作品的喜愛，Cosplay是動漫圈的同好們，透過服裝、道具，詮釋自己所喜愛的角色，是一種演繹角色的表演藝術。
-                    </p>
-                </div>
-            </div>
-            <div class="interest">
-                <div class="interest-img" id="fonts">
-                    <h2 class="needfade" style="color:black;">以文字貢獻社會。</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">自古以來，人類透過說話、使用文字，分享自己獲得的知識及想法。作為傳達資訊的方式，文字可以跨越時間和地點，富含強勁的力量。
-                        <br> 歷史上的人物、眾多的人們在思考什麼、想傳達什麼，文字是讓其得以傳達的貴重發明。因為文字這樣的特性，特別的喜歡字體，也參與許多開源字型專案。
-                        <br>
-                    </p>
-                    <h3 class="needfade"><a href="https://akira.eu.org/akitra">千秋制臺鐵客貨車表記文字</a></h3>
-                    <h3 class="needfade"><a href="https://akira.eu.org/nixie">千秋數字管體</a></h3>
-                </div>
-            </div>
-            <div class="interest">
-                <div class="interest-img" id="kancolle">
-                    <h2 class="needfade">艦收</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">「施主，4000/7000/7000/2000，資材廿。」<br> 玩了非常久也影響我非常深的遊戲，跟艦娘們都是很要好的戰友了。正妻是翔鶴。
-                    </p>
-                </div>
-            </div>
-            <div class="interest">
-                <div class="interest-img" id="code">
-                    <h2 class="needfade">Coding</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">對<ruby>寫程式<rt>算數學</rt></ruby>還不是那麼的熟練，但是寫程式是很棒的偷懶技術（拖走），正在學習寫各種寫code跟網頁。<br>曾擔任<del>機房巫女</del>網管。
-                    </p>
-                </div>
-            </div>
-            <div class="interest">
-                <div class="interest-img" id="open">
-                    <h2 class="needfade">開源</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">台大開源社。所謂<ruby>開放原始碼<rt>Open Source</rt></ruby>的精神，是將其所擁有的技術開放給其他人使用，降低知識交流的門檻，進而演變成為一種合作開發的模式，我認為對社會是很有幫助的，也想傳承下這個文化。<br>
-                    </p>
-                </div>
-            </div>
-            <div class="interest">
-                <div class="interest-img" id="room">
-                    <h2 class="needfade">Room</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">自行設計，工時約 4 個月。<br>
-                    </p>
-                </div>
-            </div>
-        </section>
+      <section id="interests">
+        <div class="interest">
+          <div class="interest-img" id="design">
+            <h2 class="needfade">設計</h2>
+          </div>
+          <div class="interest-text">
+            <p class="needfade">
+              設計與思考，能成為改變世界的力量。以人為本，思考機能性與美觀兼具的設計。
+              <br />
+              見習設計師。喜歡設計感的巧思，正在練習平面設計與UX/UI設計，希望能帶來一個更美麗的世界。
+            </p>
+          </div>
+        </div>
+        <div class="interest">
+          <div class="interest-img" id="desk">
+            <h2 class="needfade">Works</h2>
+          </div>
+          <div class="interest-text">
+            <p class="needfade">
+              UI/UX設計師，平面設計師
+              <br />
+              接受設計委託、系統架設或各式諮詢。
+            </p>
+          </div>
+        </div>
+        <div class="interest">
+          <div class="interest-img" id="travel">
+            <h2 class="needfade">旅行</h2>
+          </div>
+          <div class="interest-text">
+            <p class="needfade">
+              研究路線，探索新的地區，不同的文化體驗，是旅行最吸引人的地方。喜歡看每個地方不同的夜景，吃好吃的地方美食。總之很喜歡到處跑來跑去，感受不同的生活氣氛。
+              <br />
+            </p>
+            <h3 class="needfade">
+              遊記：
+              <br />
+              <a href="http://akira.eu.org/c90.html">COMIKET 90 &amp; 關東</a>
+            </h3>
+          </div>
+        </div>
+        <div class="interest">
+          <div class="interest-img" id="model">
+            <h2 class="needfade">模型</h2>
+          </div>
+          <div class="interest-text">
+            <p class="needfade">
+              現為台大模型社，喜歡做精緻的模型，在極小的比例下，表現出濃縮的力與美。主要做1/700的二戰船模，以及1/72的二戰飛機。
+              <br />
+              最喜歡航空母艦！
+            </p>
+          </div>
+        </div>
+        <div class="interest">
+          <div class="interest-img" id="photograph">
+            <h2 class="needfade">攝影</h2>
+          </div>
+          <div class="interest-text">
+            <p class="needfade">
+              此時此刻，只存在於這個瞬間的事物，能透過相機捕捉下來，我想這就是攝影最吸引人的地方。正在存錢錢買好一點的相機，因為很愛拍夜景，但目前的相機性能不足。對於Ps修圖也略有研究。
+            </p>
+            <h3 class="needfade">
+              <a href="https://www.flickr.com/photos/akira02/">flickr</a>
+            </h3>
+          </div>
+        </div>
+        <div class="interest">
+          <div class="interest-img" id="doujin">
+            <h2 class="needfade">同人活動</h2>
+          </div>
+          <div class="interest-text">
+            <p class="needfade">
+              「
+              <ruby>
+                どうじん
+                <rt>相同志向的人們、同好</rt>
+              </ruby>
+              」，是動漫文化的用詞，類似獨立製作，有著不受商業限制，更大的創作自由度。能在會場直接販賣自己創作的同人誌，並與讀者作出交流，是令人感動的活動。
+              <br />
+              因此常常可以在FF等同人展看到我喔！
+              <br />
+            </p>
+          </div>
+        </div>
+        <div class="interest">
+          <div class="interest-img" id="cos">
+            <h2 class="needfade">Cosplay</h2>
+          </div>
+          <div class="interest-text">
+            <p class="needfade">
+              「
+              <ruby>
+                コスプレ
+                <rt>角色扮演</rt>
+              </ruby>
+              」，正如同二創作者以創作來表達自己對作品的喜愛，Cosplay是動漫圈的同好們，透過服裝、道具，詮釋自己所喜愛的角色，是一種演繹角色的表演藝術。
+            </p>
+          </div>
+        </div>
+        <div class="interest">
+          <div class="interest-img" id="fonts">
+            <h2 class="needfade" style="color:black;">以文字貢獻社會。</h2>
+          </div>
+          <div class="interest-text">
+            <p class="needfade">
+              自古以來，人類透過說話、使用文字，分享自己獲得的知識及想法。作為傳達資訊的方式，文字可以跨越時間和地點，富含強勁的力量。
+              <br />
+              歷史上的人物、眾多的人們在思考什麼、想傳達什麼，文字是讓其得以傳達的貴重發明。因為文字這樣的特性，特別的喜歡字體，也參與許多開源字型專案。
+              <br />
+            </p>
+            <h3 class="needfade">
+              <a href="https://akira.eu.org/akitra">千秋制臺鐵客貨車表記文字</a>
+            </h3>
+            <h3 class="needfade">
+              <a href="https://akira.eu.org/nixie">千秋數字管體</a>
+            </h3>
+          </div>
+        </div>
+        <div class="interest">
+          <div class="interest-img" id="kancolle">
+            <h2 class="needfade">艦收</h2>
+          </div>
+          <div class="interest-text">
+            <p class="needfade">
+              「施主，4000/7000/7000/2000，資材廿。」
+              <br />
+              玩了非常久也影響我非常深的遊戲，跟艦娘們都是很要好的戰友了。正妻是翔鶴。
+            </p>
+          </div>
+        </div>
+        <div class="interest">
+          <div class="interest-img" id="code">
+            <h2 class="needfade">Coding</h2>
+          </div>
+          <div class="interest-text">
+            <p class="needfade">
+              對
+              <ruby>
+                寫程式
+                <rt>算數學</rt>
+              </ruby>
+              還不是那麼的熟練，但是寫程式是很棒的偷懶技術（拖走），正在學習寫各種寫code跟網頁。
+              <br />
+              曾擔任
+              <del>機房巫女</del>
+              網管。
+            </p>
+          </div>
+        </div>
+        <div class="interest">
+          <div class="interest-img" id="open">
+            <h2 class="needfade">開源</h2>
+          </div>
+          <div class="interest-text">
+            <p class="needfade">
+              台大開源社。所謂
+              <ruby>
+                開放原始碼
+                <rt>Open Source</rt>
+              </ruby>
+              的精神，是將其所擁有的技術開放給其他人使用，降低知識交流的門檻，進而演變成為一種合作開發的模式，我認為對社會是很有幫助的，也想傳承下這個文化。
+              <br />
+            </p>
+          </div>
+        </div>
+        <div class="interest">
+          <div class="interest-img" id="room">
+            <h2 class="needfade">Room</h2>
+          </div>
+          <div class="interest-text">
+            <p class="needfade">
+              自行設計，工時約 4 個月。
+              <br />
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section id="select">
-            <h2 class="needfade">Aki Select ─ 千秋的式神們</h2>
-            <img src="img/select.png">
-        </section>
+      <section id="select">
+        <h2 class="needfade">Aki Select ─ 千秋的式神們</h2>
+        <img src="img/select.png" />
+      </section>
 
-        <footer>
-            <img id="contact_img" class="needfade" src="img/contact.png">
-            <div id="contact_text">
-                <h2 class="needfade">By 千秋<span style="font-weight:100;">狐, </span><span style="font-weight:100;font-size:0.5em;">2018 updated</span></h2>
-                <h3 class="needfade">
-                    <a id="mto" href="mailto:aki(at)meru.ml" target="_newtab" onclick='this.href=this.href.replace(/\(at\)/gi, "@")'>
-                        aki@meru.ml</a>
-                </h3>
-                <p class="needfade">Made with ♥ and <a href="https://code.visualstudio.com/" target="_newtab" id="vs">Visual Studio Code</a></p><br>
-                <p class="needfade" style="margin:20px 0 50px 0;">Powered by <img src="img/jf_logo.png" style="
-                    bottom: -25px;
-                    padding: 0;
-                    width: 200px;
-                    position: relative;
-                    margin-top: -40px;"></p>
-            </div>
-        </footer>
+      <footer>
+        <img id="contact_img" class="needfade" src="img/contact.png" />
+        <div id="contact_text">
+          <h2 class="needfade">
+            By 千秋
+            <span style="font-weight:100;">狐,</span>
+            <span style="font-weight:100;font-size:0.5em;">2018 updated</span>
+          </h2>
+          <h3 class="needfade">
+            <a
+              id="mto"
+              href="mailto:aki(at)meru.ml"
+              target="_newtab"
+              onclick="this.href=this.href.replace(/\(at\)/gi, &quot;@&quot;)">
+              aki@meru.ml
+            </a>
+          </h3>
+          <p class="needfade">
+            Made with ♥ and
+            <a href="https://code.visualstudio.com/" target="_newtab" id="vs">
+              Visual Studio Code
+            </a>
+          </p>
+          <br />
+          <p class="needfade" style="margin:20px 0 50px 0;">
+            Powered by
+            <img
+              src="img/jf_logo.png"
+              style="
+                bottom: -25px;
+                padding: 0;
+                width: 200px;
+                position: relative;
+                margin-top: -40px;"
+            />
+          </p>
+        </div>
+      </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/gh/ray851107/dom-scheduler@v1.0.2/dom-scheduler.min.js"></script>
     <script src="./parallax-background-image/parallax-background-image.min.js"></script>
     <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-56705.js"></script>
     <script>
-        var container = document.getElementById('viewport');
-        var viewport = parallax.createViewport(container);
-        viewport.add('.interest-img:not(#kancolle)', { velocity: 0.5 });
-        viewport.add('#kancolle', { velocity: 0.3, alignX: 'right' });
+      var container = document.getElementById('viewport');
+      var viewport = parallax.createViewport(container);
+      viewport.add('.interest-img:not(#kancolle)', { velocity: 0.5 });
+      viewport.add('#kancolle', { velocity: 0.3, alignX: 'right' });
 
-        var COVER_BG = './img/background.jpg';
-        var coverBg = document.createElement('img');
-        coverBg.onload = function() {
-            var cover = document.getElementById('cover');
-            cover.classList.add('cover-loaded');
-        };
-        coverBg.src = COVER_BG;
+      var COVER_BG = './img/background.jpg';
+      var coverBg = document.createElement('img');
+      coverBg.onload = function() {
+        var cover = document.getElementById('cover');
+        cover.classList.add('cover-loaded');
+      };
+      coverBg.src = COVER_BG;
 
-        var scheduler = domScheduler.scheduler;
-        var elements = Array.prototype.slice.call(document.querySelectorAll('.needfade'));
+      var scheduler = domScheduler.scheduler;
+      var elements = Array.prototype.slice.call(
+        document.querySelectorAll('.needfade')
+      );
 
-        function fadeIn(element) {
-            function loop() {
-                if (element.getBoundingClientRect().top < container.getBoundingClientRect().bottom) {
-                    scheduler.write(function() {
-                        element.classList.add("fade");
-                    });
-                } else {
-                    scheduler.read(loop);
-                }
-            }
-            loop();
+      function fadeIn(element) {
+        function loop() {
+          if (
+            element.getBoundingClientRect().top <
+            container.getBoundingClientRect().bottom
+          ) {
+            scheduler.write(function() {
+              element.classList.add('fade');
+            });
+          } else {
+            scheduler.read(loop);
+          }
         }
-        elements.forEach(fadeIn);
+        loop();
+      }
+      elements.forEach(fadeIn);
     </script>
     <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+          i[r] ||
+          function() {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        'script',
+        'https://www.google-analytics.com/analytics.js',
+        'ga'
+      );
 
-        ga('create', 'UA-84357919-1', 'auto');
-        ga('send', 'pageview');
+      ga('create', 'UA-84357919-1', 'auto');
+      ga('send', 'pageview');
     </script>
-</body>
-
+  </body>
 </html>
