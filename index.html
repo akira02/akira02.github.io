@@ -335,12 +335,13 @@
         </div>
       </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/gh/ray851107/dom-scheduler@v1.0.2/dom-scheduler.min.js"></script>
-    <script src="./parallax-background-image/parallax-background-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ray851107/dom-scheduler@v1.0.3/dom-scheduler.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ray851107/parallax-background-image@v2.0.2/parallax-background-image.min.js"></script>
     <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-56705.js"></script>
     <script>
+      var scheduler = domScheduler.scheduler;
       var container = document.getElementById('viewport');
-      var viewport = parallax.createViewport(container);
+      var viewport = parallax.createViewport(container, { scheduler: scheduler });
       viewport.add('.interest-img:not(#kancolle)', { velocity: 0.5 });
       viewport.add('#kancolle', { velocity: 0.3, alignX: 'right' });
 
@@ -352,7 +353,6 @@
       };
       coverBg.src = COVER_BG;
 
-      var scheduler = domScheduler.scheduler;
       var elements = Array.prototype.slice.call(
         document.querySelectorAll('.needfade')
       );
