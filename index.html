@@ -374,7 +374,9 @@
               needfade.push(element);
             }
           }
-          scheduler.read(fadeLoop);
+          if (needfade.length > 0) {
+            scheduler.read(fadeLoop);
+          }
         }
         scheduler.read(fadeLoop);
       }());
