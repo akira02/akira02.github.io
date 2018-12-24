@@ -339,40 +339,45 @@
     <script src="https://cdn.jsdelivr.net/gh/ray851107/parallax-background-image@v2.0.2/parallax-background-image.min.js"></script>
     <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-56705.js"></script>
     <script>
-      var scheduler = domScheduler.scheduler;
-      var container = document.getElementById('viewport');
-      var viewport = parallax.createViewport(container, { scheduler: scheduler });
-      viewport.add('.interest-img:not(#kancolle)', { velocity: 0.5 });
-      viewport.add('#kancolle', { velocity: 0.3, alignX: 'right' });
+      (function() {
+        'use strict';
 
-      var COVER_BG = './img/background.jpg';
-      var coverBg = document.createElement('img');
-      coverBg.onload = function() {
-        var cover = document.getElementById('cover');
-        cover.classList.add('cover-loaded');
-      };
-      coverBg.src = COVER_BG;
+        var scheduler = domScheduler.scheduler;
+        var container = document.getElementById('viewport');
+        var viewport = parallax.createViewport(container, { scheduler: scheduler });
+        viewport.add('.interest-img:not(#kancolle)', { velocity: 0.5 });
+        viewport.add('#kancolle', { velocity: 0.3, alignX: 'right' });
 
-      var elements = Array.prototype.slice.call(
-        document.querySelectorAll('.needfade')
-      );
+        var COVER_BG = './img/background.jpg';
+        var coverBg = document.createElement('img');
+        coverBg.onload = function() {
+          var cover = document.getElementById('cover');
+          cover.classList.add('cover-loaded');
+        };
+        coverBg.src = COVER_BG;
 
-      function fadeIn(element) {
-        function loop() {
-          if (
-            element.getBoundingClientRect().top <
-            container.getBoundingClientRect().bottom
-          ) {
-            scheduler.write(function() {
-              element.classList.add('fade');
-            });
-          } else {
-            scheduler.read(loop);
-          }
+        function fadeIn(element) {
+          scheduler.write(function() {
+            element.classList.add('fade');
+          });
         }
-        loop();
-      }
-      elements.forEach(fadeIn);
+
+        var needfade = document.getElementsByClassName('needfade');
+        needfade = Array.prototype.slice.call(needfade);
+        function fadeLoop() {
+          var bottom = container.getBoundingClientRect().bottom;
+          for (var i = 0, len = needfade.length; i < len; ++i) {
+            var element = needfade.shift();
+            if (element.getBoundingClientRect().top < bottom) {
+              fadeIn(element);
+            } else {
+              needfade.push(element);
+            }
+          }
+          scheduler.read(fadeLoop);
+        }
+        scheduler.read(fadeLoop);
+      }());
     </script>
     <script>
       (function(i, s, o, g, r, a, m) {
