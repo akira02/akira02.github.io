@@ -335,16 +335,14 @@
         </div>
       </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/gh/ray851107/dom-scheduler@v1.0.6/dom-scheduler.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/ray851107/parallax-background-image@v2.1.0/parallax-background-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ray851107/parallax-background-image@v2.2.0/parallax-background-image.min.js"></script>
     <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-56705.js"></script>
     <script>
       (function() {
         'use strict';
 
-        var scheduler = domScheduler.scheduler;
         var container = document.getElementById('viewport');
-        var viewport = parallax.createViewport(container, { scheduler: scheduler });
+        var viewport = parallax.createViewport(container);
         viewport.add('.interest-img:not(#kancolle)', { velocity: 0.5 });
         viewport.add('#kancolle', { velocity: 0.3, alignX: 'right' });
 
@@ -357,14 +355,14 @@
         coverBg.src = COVER_BG;
 
         function fadeIn(element) {
-          scheduler.write(function() {
+          window.requestAnimationFrame(function() {
             element.classList.add('fade');
           });
         }
 
         var needfade = document.getElementsByClassName('needfade');
         needfade = Array.prototype.slice.call(needfade);
-        function fadeLoop() {
+        function checkFade() {
           var bottom = container.getBoundingClientRect().bottom;
           for (var i = 0, len = needfade.length; i < len; ++i) {
             var element = needfade.shift();
@@ -374,11 +372,14 @@
               needfade.push(element);
             }
           }
-          if (needfade.length > 0) {
-            scheduler.read(fadeLoop);
+          if (needfade.length === 0) {
+            container.removeEventListener('scroll', checkFade);
+            window.removeEventListener('resize', checkFade);
           }
         }
-        scheduler.read(fadeLoop);
+        container.addEventListener('scroll', checkFade);
+        window.addEventListener('resize', checkFade);
+        checkFade();
       }());
     </script>
     <script>
