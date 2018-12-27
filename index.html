@@ -339,6 +339,7 @@
     <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
     <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-56705.js"></script>
     <script>
+      /* parallax */
       (function() {
         'use strict';
 
@@ -346,14 +347,30 @@
         var viewport = parallax.createViewport(container);
         viewport.add('.interest-img:not(#kancolle)', { velocity: 0.5 });
         viewport.add('#kancolle', { velocity: 0.3, alignX: 'right' });
+      }());
 
-        var COVER_BG = './img/background.jpg';
-        var coverBg = document.createElement('img');
-        coverBg.onload = function() {
-          var cover = document.getElementById('cover');
-          cover.classList.add('cover-loaded');
+      /* cover background-image fade-in */
+      (function() {
+        'use strict';
+
+        function cssBackgroundImage(element) {
+          var style = window.getComputedStyle(element);
+          return /^url\((['"]?)(.*?)(\1)\)$/.exec(style.backgroundImage)[2];
+        }                                                                       
+
+        var cover = document.getElementById('cover');
+        var coverLoader = document.createElement('img');
+        coverLoader.onload = function() {
+          window.requestAnimationFrame(function() {
+            cover.classList.add('cover-loaded');
+          });
         };
-        coverBg.src = COVER_BG;
+        coverLoader.src = cssBackgroundImage(cover);
+      }());
+
+      /* .needfade fade-in */
+      (function() {
+        'use strict';
 
         function fadeIn(element) {
           window.requestAnimationFrame(function() {
@@ -368,7 +385,7 @@
               fadeIn(entries[i].target);
             }
           }
-        }, { root: container });
+        }, { root: document.getElementById('viewport') });
 
         var needFade = document.getElementsByClassName('needfade');
         for (var i = 0; i < needFade.length; ++i) {
