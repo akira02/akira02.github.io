@@ -336,6 +336,7 @@
       </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/gh/ray851107/parallax-background-image@v2.2.2/parallax-background-image.min.js"></script>
+    <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
     <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-56705.js"></script>
     <script>
       (function() {
@@ -360,26 +361,19 @@
           });
         }
 
-        var needfade = document.getElementsByClassName('needfade');
-        needfade = Array.prototype.slice.call(needfade);
-        function checkFade() {
-          var bottom = container.getBoundingClientRect().bottom;
-          for (var i = 0, len = needfade.length; i < len; ++i) {
-            var element = needfade.shift();
-            if (element.getBoundingClientRect().top < bottom) {
-              fadeIn(element);
-            } else {
-              needfade.push(element);
+        var fadeObserver = new IntersectionObserver(function(entries) {
+          for (var i = 0; i < entries.length; ++i) {
+            if (entries[i].isIntersecting) {
+              fadeObserver.unobserve(entries[i].target);
+              fadeIn(entries[i].target);
             }
           }
-          if (needfade.length === 0) {
-            container.removeEventListener('scroll', checkFade);
-            window.removeEventListener('resize', checkFade);
-          }
+        }, { root: container });
+
+        var needFade = document.getElementsByClassName('needfade');
+        for (var i = 0; i < needFade.length; ++i) {
+          fadeObserver.observe(needFade[i]);
         }
-        container.addEventListener('scroll', checkFade);
-        window.addEventListener('resize', checkFade);
-        checkFade();
       }());
     </script>
     <script>
