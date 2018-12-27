@@ -355,7 +355,7 @@
 
         function cssBackgroundImage(element) {
           var style = window.getComputedStyle(element);
-          return /^url\((['"]?)(.*?)(\1)\)$/.exec(style.backgroundImage)[2];
+          return /^url\((['"]?)(.*)\1\)$/.exec(style.backgroundImage)[2];
         }                                                                       
 
         var cover = document.getElementById('cover');
