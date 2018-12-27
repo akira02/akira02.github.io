@@ -95,7 +95,6 @@ p {
   background-size: cover;
   background-color: #fff;
   background-position: 50% 30%;
-  -webkit-tranform: translateZ(0);
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   display: flex;
