@@ -340,8 +340,7 @@
       (function() {
         'use strict';
 
-        var container = document.getElementById('viewport');
-        var viewport = parallax.createViewport(container);
+        var viewport = parallax.createViewport('#viewport');
         viewport.add('.interest-img:not(#kancolle)', { velocity: 0.5 });
         viewport.add('#kancolle', { velocity: 0.3, alignX: 'right' });
       }());
