@@ -107,7 +107,7 @@ p {
     max-width: 50vw;
     transform-origin: 40% 20%;
     -webkit-animation: swing ease-in-out 1s infinite alternate;
-    animation: swing ease-in-out 1s infinite alternate;
+    animation: swing ease-in-out 1s infinite alternate, free-fall 1s ease-out forwards;
 }
 
 @keyframes swing {
@@ -116,6 +116,32 @@ p {
     }
     100% {
         transform: rotate(-3deg);
+    }
+}
+
+@keyframes free-fall {
+    0% {
+        top: -100%;
+    }
+    20% {
+        top: 15%;
+        left: 1%;
+    }
+    40% {
+        top: -12%;
+        left: 3%;
+    }
+    60% {
+        top: 7%;
+        left: 1%;
+    }
+    80% {
+        top: -1%;
+        left: -0.3%;
+    }
+    100% {
+        top: 0%;
+        left: 0%;
     }
 }
 
