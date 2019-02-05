@@ -39,7 +39,11 @@
         <!-- Header -->
 
         <div id="cover">
-            <img id="cover-img" src="./img/coverimg.webp" />
+            <picture id="cover-img">
+                <source id="cover-img" srcset="./img/coverimg.webp" type="image/webp">
+                <source id="cover-img" srcset="./img/coverimg.jp2" type="image/jp2">
+                <img id="cover-img" srcset="./img/coverimg.png" alt="千秋">
+            </picture>
             <div id="cover-text">
                 <object id="sign" type="image/svg+xml" style="transform: translateZ(0);" data="./img/sign_animated.svg" alt="Hi,千秋です！"></object>
             </div>
