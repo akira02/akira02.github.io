@@ -53,7 +53,6 @@ h3 {
     font-size: 2em;
     line-height: 1.5em;
     font-weight: 500;
-    font-family: 'soleil';
     margin: 0;
 }
 
@@ -171,7 +170,7 @@ p {
     position: sticky;
     top: 0;
     min-height: 100vh;
-    background-color: #ffeded;
+    background-color: #13181a;
     display: flex;
     align-items: center;
 }
@@ -189,10 +188,7 @@ p {
 #about-text {
     margin: 0 5% 0 5%;
     max-width: 450px;
-}
-
-#about-text p {
-    color: #666;
+    color: white;
 }
 
 @media (max-width: 1010px) {
@@ -254,7 +250,7 @@ p {
 
 .interest-text {
     color: #fff;
-    background-color: rgba(159, 53, 58, 0.9);
+    background-color: rgba(39, 7, 8, 0.6);
     width: 30%;
     height: 100%;
     display: flex;
@@ -294,7 +290,7 @@ p {
 }
 
 #photograph {
-    background-image: url('./img/photograph2.jpg');
+    background-image: url('./img/photograph3.jpg');
 }
 
 #fonts {
