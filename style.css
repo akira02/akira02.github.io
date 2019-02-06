@@ -248,6 +248,10 @@ p {
     justify-content: center;
 }
 
+.interest-img>h2 {
+    font-size: 4em;
+}
+
 .interest-text {
     color: #fff;
     background-color: rgba(39, 7, 8, 0.6);
@@ -338,10 +342,6 @@ p {
         position: relative;
         background-color: rgba(255, 253, 251, 0.7);
     }
-    #open,
-    #code {
-        width: 100%;
-    }
 }
 
 #desk {
@@ -350,6 +350,10 @@ p {
 
 #room {
     background-image: url('./img/room.jpg');
+}
+
+#paint {
+    background-image: url('./img/paint.jpg');
 }
 
 footer {
