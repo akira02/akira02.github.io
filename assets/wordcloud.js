@@ -191,104 +191,29 @@ var wordclouds = {
     "series": series
 };
 
-var myConfig = {
-    graphset: [{
-        id: "wordcloud",
-        height: '85%',
-        width: "100%",
-        offsetY: "20%",
-        type: "wordcloud",
-        options: {
-            maxFontSize: 48,
-            words: acgn,
-            palette: ['#bdc3c7', '#1abc9c', '#3498db', '#9b59b6', '#f1c40f', '#e74c3c', '#2ecc71', '#e67e22']
-        }
-    }, {
-        id: 'shapes',
-        height: '15%',
-        x: 0,
-        y: '85%',
-        width: "100%",
-        type: null,
-        title: {
-            text: "推薦的",
-            x: "-18%",
-            y: -3,
-            fontSize: 50
-        },
-        labels: [{
-            id: "acgn",
-            text: "動漫作品",
-            "font-family": "jf-jinxuan",
-            "font-size": "50",
-            color: "#FFEC20",
-            x: "37%",
-            cursor: "hand"
-        }, {
-            id: "music",
-            text: "音樂",
-            "font-family": "jf-jinxuan",
-            "font-size": "50",
-            color: "#999",
-            x: "49.8%",
-            cursor: "hand"
-        }, {
-            id: "game",
-            text: "遊戲",
-            "font-family": "jf-jinxuan",
-            "font-size": "50",
-            color: "#999",
-            x: "57%",
-            cursor: "hand"
-        }, {
-            id: "series",
-            text: "連續劇",
-            "font-family": "jf-jinxuan",
-            "font-size": "50",
-            color: "#999",
-            x: "65%",
-            cursor: "hand"
+function config(words) {
+    return {
+        graphset: [{
+            id: "wordcloud",
+            height: '100%',
+            width: "100%",
+            offsetY: "20%",
+            type: "wordcloud",
+            options: {
+                maxFontSize: 48,
+                words: words,
+                palette: ['#bdc3c7', '#1abc9c', '#3498db', '#9b59b6', '#f1c40f', '#e74c3c', '#2ecc71', '#e67e22']
+            }
         }]
-    }]
-};
-
-var activeColor = "#FFEC20"
-
-zingchart.render({
-    id: 'myChart',
-    data: myConfig,
-    height: '100%',
-    width: "100%",
-    theme: 'dark'
-});
-
-(function listenForClicks() {
-    var active = 'acgn'
-    zingchart.label_click = function(p) {
-        var target = p.labelid;
-
-        if (target !== active) {
-
-            var json = zingchart.exec('myChart', 'getoriginaljson')
-
-            json.graphset[1].labels.forEach(function(label) {
-                if (label.id == target) {
-                    label.alpha = 1.0;
-                    label.color = activeColor;
-                    title = label.text;
-                } else {
-                    label.alpha = 0.7;
-                    label.color = '#999';
-                }
-            });
-
-            json.graphset[0].options.words = wordclouds[target]
-
-            zingchart.exec('myChart', 'setdata', {
-                data: json
-            });
-
-            active = target;
-        }
     }
-})()
+}
+
+for (var name in wordclouds) {
+    zingchart.render({
+        id: 'wordcloud-tab-' + name,
+        data: config(wordclouds[name]),
+        height: '100%',
+        width: "100%",
+        theme: 'dark'
+    });
+}
