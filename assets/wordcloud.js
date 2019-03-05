@@ -1,0 +1,251 @@
+var acgn = [
+    { text: '魔法少女まどか☆マギカ', count: 10 },
+    { text: 'Steins;Gate', count: 9 },
+    { text: 'Psycho-Pass S01', count: 9 },
+    { text: 'NO GAME NO LIFE 遊戲人生', count: 9 },
+    { text: '少女與戰車', count: 8 },
+    { text: 'JOJO的奇幻冒險', count: 8 },
+    { text: '奇諾之旅', count: 8 },
+    { text: 'New Game!', count: 8 },
+    { text: '小林家的女僕龍', count: 8 },
+    { text: '搖曳露營', count: 8 },
+    { text: '吹響吧！上低音號', count: 7 },
+    { text: 'Kill la Kill', count: 7 },
+    { text: '響～成為小說家的方法', count: 7 },
+    { text: '比宇宙更遙遠的地方', count: 7 },
+    { text: '一拳超人', count: 7 },
+    { text: '時鐘機關之星', count: 7 },
+    { text: '寶石之國', count: 7 },
+    { text: '幼女戰記', count: 7 },
+    { text: '少女終末旅行', count: 7 },
+    { text: '狼與辛香料', count: 7 },
+    { text: '夏日大作戰', count: 7 },
+    { text: '狼少年今天也說謊了', count: 7 },
+    { text: 'Fate/Zero', count: 7 },
+    { text: '來自深淵', count: 7 },
+    { text: '只有我不存在的都市', count: 7 },
+    { text: '彼之初', count: 7 },
+    { text: '紫羅蘭的永恆花園', count: 7 },
+    { text: 'Aldnoah/Zero S01', count: 7 },
+    { text: 'Daring in the FranXX', count: 5 },
+    { text: '月界金融末世錄', count: 7 },
+    { text: '術數師', count: 7 },
+    { text: '月與火犬', count: 7 },
+    { text: '廢天使加百列', count: 7 },
+    { text: '別當歐尼醬了', count: 7 },
+    { text: '擅長捉弄人的高木同學', count: 7 },
+    { text: '擅長捉弄人的原高木同學', count: 7 },
+    { text: '賢慧幼妻仙狐小姐', count: 7 },
+    { text: '非人哉', count: 7 },
+    { text: '強襲魔女', count: 7 },
+    { text: 'Haifuri!青春波紋', count: 7 },
+    { text: '狐仙的戀愛入門', count: 7 },
+    { text: '月夜的奶酪', count: 7 },
+    { text: 'Fate/Stay night', count: 6 },
+    { text: '你的名字', count: 6 },
+    { text: '狼的孩子雨和雪', count: 6 },
+    { text: '來自新世界', count: 6 },
+    { text: '魔法禁書目錄', count: 6 },
+    { text: '科學超電磁砲', count: 6 },
+    { text: '刀劍神域', count: 6 },
+    { text: '境界的彼方', count: 6 },
+    { text: 'Gate奇幻自衛隊', count: 6 },
+    { text: '涼宮春日系列', count: 6 },
+    { text: 'Re:從零開始的異世界生活', count: 6 },
+    { text: '物語系列', count: 6 },
+    { text: '灼眼的夏娜', count: 6 },
+    { text: '零之使魔', count: 6 },
+    { text: '路人超能100', count: 6 },
+    { text: '銀之匙', count: 6 },
+    { text: '幸運星', count: 6 },
+    { text: '掟上今日子系列', count: 6 },
+    { text: '我的妹妹哪有這麼可愛', count: 6 },
+    { text: '點兔', count: 6 },
+    { text: '為美好的世界獻上祝福', count: 6 },
+    { text: '魔法科高中的劣等生', count: 6 },
+    { text: '輕鬆百合', count: 6 },
+    { text: 'GJ部', count: 6 },
+    { text: '小魔女學園', count: 6 },
+    { text: '學生會長開始了女裝', count: 6 },
+    { text: '櫻花莊的寵物女孩', count: 6 },
+    { text: '夢沉抹大拉', count: 6 },
+    { text: '重裝武器', count: 6 },
+    { text: '未來日記', count: 6 },
+    { text: '死亡筆記本', count: 6 },
+    { text: '冰菓', count: 6 },
+    { text: '龍王的工作', count: 6 },
+    { text: '守護甜心', count: 6 },
+    { text: 'Re:creators', count: 6 },
+    { text: '鎖鎖美小姐不好好努力', count: 6 },
+    { text: '向陽素描', count: 5 },
+    { text: '數學少女', count: 5 },
+    { text: '理科生墜入情網', count: 5 },
+    { text: '關於我女友是一本正經的處女bitch這件事', count: 5 },
+    { text: '碧陽學生會', count: 5 },
+    { text: '炫風管家', count: 5 },
+    { text: 'BLEACH死神', count: 5 },
+    { text: '宇宙戰艦大和號', count: 5 },
+    { text: '翠星上的加爾岡緹亞', count: 5 },
+    { text: '樂園追放', count: 5 }
+
+]
+var music = [
+    { text: '梶浦由記', count: 10 },
+    { text: 'Mili', count: 9 },
+    { text: '櫸坂46', count: 8 },
+    { text: 'HIMEHINA', count: 9 },
+    { text: '美波', count: 9 },
+    { text: '三無', count: 9 },
+    { text: '富士葵', count: 9 },
+    { text: 'Ayasa', count: 9 },
+    { text: '燦鳥ノム', count: 9 },
+    { text: '花譜', count: 9 },
+    { text: 'Chalili茶理理', count: 8 },
+    { text: '利香', count: 8 },
+    { text: 'VY1', count: 9 },
+    { text: '鏡音リン・レン', count: 9 },
+    { text: '初音ミク', count: 9 },
+    { text: '双笙子', count: 8 },
+    { text: 'YuNi', count: 8 },
+    { text: 'REOL', count: 8 },
+    { text: 'ウォルピス社', count: 8 },
+    { text: 'けやき坂46', count: 8 },
+    { text: '久石讓', count: 8 },
+    { text: 'DJ OKAWARI', count: 9 },
+    { text: '高垣楓(CV.早見沙織)', count: 9 },
+    { text: '米津玄师', count: 9 },
+    { text: '藍井エイル', count: 9 },
+    { text: 'DJ OKAWARI', count: 9 },
+    { text: '奧華子', count: 8 },
+    { text: '川井郁子', count: 8 },
+]
+var game = [
+    { text: 'Portal 傳送門', count: 10 },
+    { text: '艦隊これくしょん-艦これ-', count: 10 },
+    { text: 'アズールレーン 碧藍航線', count: 10 },
+    { text: 'デレステ 偶像大師灰姑娘', count: 9 }
+]
+var series = [
+    { text: 'アンナチュラル 法醫女王', count: 10 },
+    { text: '逃げるは恥だが役に立つ 月薪嬌妻', count: 10 },
+    { text: 'House of Cards 紙牌屋', count: 10 },
+    { text: 'NARCOS 毒梟', count: 9 },
+    { text: '絕命毒師', count: 9 },
+    { text: '怦然心動的人生整理魔法', count: 8 },
+    { text: '黑鏡', count: 8 },
+    { text: 'CSI 犯罪現場', count: 8 },
+    { text: '空中浩劫', count: 8 },
+    { text: '藥命效應', count: 8 },
+    { text: '無照律師', count: 9 },
+    { text: '怪奇物語', count: 9 },
+    { text: '指定倖存者', count: 9 }
+]
+
+var wordclouds = {
+    "acgn": acgn,
+    "music": music,
+    "game": game,
+    "series": series
+};
+
+var myConfig = {
+    graphset: [{
+        id: "wordcloud",
+        height: '85%',
+        width: "100%",
+        offsetY: "20%",
+        type: "wordcloud",
+        options: {
+            maxFontSize: 48,
+            words: acgn,
+            palette: ['#bdc3c7', '#1abc9c', '#3498db', '#9b59b6', '#f1c40f', '#e74c3c', '#2ecc71', '#e67e22']
+        }
+    }, {
+        id: 'shapes',
+        height: '15%',
+        x: 0,
+        y: '85%',
+        width: "100%",
+        type: null,
+        title: {
+            text: "推薦的",
+            x: "-18%",
+            y: -3,
+            fontSize: 50
+        },
+        labels: [{
+            id: "acgn",
+            text: "動漫作品",
+            "font-family": "jf-jinxuan",
+            "font-size": "50",
+            color: "#FFEC20",
+            x: "37%",
+            cursor: "hand"
+        }, {
+            id: "music",
+            text: "音樂",
+            "font-family": "jf-jinxuan",
+            "font-size": "50",
+            color: "#999",
+            x: "49.8%",
+            cursor: "hand"
+        }, {
+            id: "game",
+            text: "遊戲",
+            "font-family": "jf-jinxuan",
+            "font-size": "50",
+            color: "#999",
+            x: "57%",
+            cursor: "hand"
+        }, {
+            id: "series",
+            text: "連續劇",
+            "font-family": "jf-jinxuan",
+            "font-size": "50",
+            color: "#999",
+            x: "65%",
+            cursor: "hand"
+        }]
+    }]
+};
+
+var activeColor = "#FFEC20"
+
+zingchart.render({
+    id: 'myChart',
+    data: myConfig,
+    height: '100%',
+    width: "100%",
+    theme: 'dark'
+});
+
+(function listenForClicks() {
+    var active = 'acgn'
+    zingchart.label_click = function(p) {
+        var target = p.labelid;
+
+        if (target !== active) {
+
+            var json = zingchart.exec('myChart', 'getoriginaljson')
+
+            json.graphset[1].labels.forEach(function(label) {
+                if (label.id == target) {
+                    label.alpha = 1.0;
+                    label.color = activeColor;
+                    title = label.text;
+                } else {
+                    label.alpha = 0.7;
+                    label.color = '#999';
+                }
+            });
+
+            json.graphset[0].options.words = wordclouds[target]
+
+            zingchart.exec('myChart', 'setdata', {
+                data: json
+            });
+
+            active = target;
+        }
+    }
+})()

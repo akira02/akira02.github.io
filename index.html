@@ -25,6 +25,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<script>
+    zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/"
+</script>
 
 <body>
     <div id="viewport">
@@ -77,39 +81,33 @@
                 <h2>八雲 秋狐</h2>
                 <p>
                     千秋 in 二次元計畫的看板娘
+                    <br /> 是祀奉以宇迦之御魂大神為首，諸位稻荷神的神使巫女。
                     <br />
                     <br /> 固有技能：千秋式幸運
                     <br /> 使魔：赤狐
                     <br /> 所屬：屬扶桑皇國海軍岩川基地
                     <br /> 軍銜：少将
-                    <br /> 座機：九試単座戦闘機、零式水上觀測機
+                    <br /> 座機：九試単座戦闘機
                     <br /> 人物設定：亞莓 ╱
                     <del>CV：千葉紗子</del>
                 </p>
             </div>
         </section>
-
+        <section id="myChart">
+        </section>
         <section id="interests">
-            <div class="interest" id="design">
+            <div class="interest" id="fonts">
                 <div class="interest-img">
-                    <h2 class="needfade">設計</h2>
+                    <h2 class="needfade" style="color:black; background-color: white;">設計</h2>
                 </div>
                 <div class="interest-text">
                     <p class="needfade">
-                        設計與巧思，能成為改變世界的力量。喜好以人為本，思考機能性與美觀兼具的設計。
-                        <br /> 正在學習各種設計，目前擅長平面設計與UX/UI設計，希望這些作品能帶來一個更美麗的世界❤
+                        我喜歡以人為本，思考機能性與美觀兼具的設計。曾任UI/UX設計師、網頁設計師。
+                        <br />實習平面設計師、字體設計師。希望能為一個更美、更有設計感的社會盡一份心力。
+                        <br />
                     </p>
-                </div>
-            </div>
-            <div class="interest" id="desk">
-                <div class="interest-img">
-                    <h2 class="needfade">仕事</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">
-                        現任職於justfont。業餘UI/UX設計師，平面設計師，資訊管理工程師。
-                        <br /> 接受設計委託、系統架設或各式諮詢。
-                    </p>
+                    <a href="https://akira.eu.org/akitra">千秋制臺鐵客貨車表記文字</a>
+                    <a href="https://akira.eu.org/nixie">千秋數字管體</a>
                 </div>
             </div>
             <div class="interest" id="travel">
@@ -138,6 +136,17 @@
                     </p>
                 </div>
             </div>
+            <div class="interest" id="doujin">
+                <div class="interest-img">
+                    <h2 class="needfade">同人活動</h2>
+                </div>
+                <div class="interest-text">
+                    <p class="needfade">
+                        「<ruby>どうじん<rt>相同志向的人們、同好</rt></ruby> 」，是動漫文化的用詞，類似獨立製作，有著不受商業限制，更大的創作自由度。
+                        <br /> 能在會場直接販賣自己創作的同人誌，並與讀者交流，是充滿創作能量的活動。常常在FF等同人展上出沒喔！
+                    </p>
+                </div>
+            </div>
             <div class="interest" id="photograph">
                 <div class="interest-img">
                     <h2 class="needfade">攝影</h2>
@@ -152,14 +161,14 @@
                     </h3>
                 </div>
             </div>
-            <div class="interest" id="doujin">
+            <div class="interest" id="kancolle">
                 <div class="interest-img">
-                    <h2 class="needfade">同人活動</h2>
+                    <h2 class="needfade">艦收</h2>
                 </div>
                 <div class="interest-text">
                     <p class="needfade">
-                        「<ruby>どうじん<rt>相同志向的人們、同好</rt></ruby> 」，是動漫文化的用詞，類似獨立製作，有著不受商業限制，更大的創作自由度。
-                        <br /> 能在會場直接販賣自己創作的同人誌，並與讀者交流，是充滿創作能量的活動。常常在FF等同人展上出沒喔！
+                        「施主，4000/7000/7000/2000，資材廿。」
+                        <br /> 玩了非常久也影響我非常深的遊戲，跟艦娘們都是很要好的戰友了。正妻是翔鶴。
                     </p>
                 </div>
             </div>
@@ -173,17 +182,6 @@
                     </p>
                 </div>
             </div>
-            <div class="interest" id="kancolle">
-                <div class="interest-img">
-                    <h2 class="needfade">艦收</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">
-                        「施主，4000/7000/7000/2000，資材廿。」
-                        <br /> 玩了非常久也影響我非常深的遊戲，跟艦娘們都是很要好的戰友了。正妻是翔鶴。
-                    </p>
-                </div>
-            </div>
             <div class="interest" id="model">
                 <div class="interest-img">
                     <h2 class="needfade">模型</h2>
@@ -193,19 +191,6 @@
                         喜歡做精緻的模型，現為台大模型社。醉心於極小的比例下所表現出的，濃縮的力與美。
                         <br /> 大部分作品為1/700的二戰日本軍艦，以及1/72的二戰飛機。最喜歡航空母艦！
                     </p>
-                </div>
-            </div>
-            <div class="interest" id="fonts">
-                <div class="interest-img">
-                    <h2 class="needfade" style="color:black; background-color: white;">以文字貢獻社會</h2>
-                </div>
-                <div class="interest-text">
-                    <p class="needfade">
-                        歷史上的人物、眾多的人們在思考什麼、想傳達什麼，文字是讓其得以傳達的貴重發明。因為文字這樣的特性，特別的喜歡字體，也參與許多開源字型專案。
-                        <br />
-                    </p>
-                    <a href="https://akira.eu.org/akitra">千秋制臺鐵客貨車表記文字</a>
-                    <a href="https://akira.eu.org/nixie">千秋數字管體</a>
                 </div>
             </div>
             <div class="interest">
@@ -231,12 +216,12 @@
             </div>
             <div class="interest" id="room">
                 <div class="interest-img">
-                    <h2 class="needfade">房間</h2>
+                    <h2 class="needfade">在房間耍廢</h2>
                 </div>
                 <div class="interest-text">
                     <p class="needfade">
-                        自行畫圖發包的室內設計作品，工時約 4 個月。
-                        <br />
+                        為了做出不用去咖啡廳，也能極致的悠閒讀書或工作的環境，
+                        <br />自行室內設計畫圖、發包，裝潢了自己的房間，工時約 4 個月。
                     </p>
                 </div>
             </div>
@@ -275,7 +260,8 @@
     </div>
     <script src="https://cdn.jsdelivr.net/gh/ray851107/parallax-background-image@v2.3.1/parallax-background-image.min.js" integrity="sha384-Xg1qQ7SY6fMRT1/GLLHDt934c0hTeLW74QboZKRd1H8YZOAN6ZVHvIwGHGffy/8C" crossorigin="anonymous"></script>
     <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
-    <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-56705.js"></script>
+    <script src="https://s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-56705.js"></script>
+    <script src="./assets/wordcloud.js"></script>
     <script>
         /* parallax */
         (function() {
