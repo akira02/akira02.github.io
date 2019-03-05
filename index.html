@@ -93,7 +93,26 @@
                 </p>
             </div>
         </section>
-        <section id="myChart">
+        <section id="wordcloud">
+          <input type="radio" id="wordcloud-radio-acgn" name="wordcloud-radio" value="acgn" checked></input>
+          <input type="radio" id="wordcloud-radio-music" name="wordcloud-radio" value="music"></input>
+          <input type="radio" id="wordcloud-radio-game" name="wordcloud-radio" value="game"></input>
+          <input type="radio" id="wordcloud-radio-series" name="wordcloud-radio" value="series"></input>
+
+          <div id="wordcloud-tabs">
+            <div id="wordcloud-tab-acgn" class="wordcloud-tab"></div>
+            <div id="wordcloud-tab-music" class="wordcloud-tab"></div>
+            <div id="wordcloud-tab-game" class="wordcloud-tab"></div>
+            <div id="wordcloud-tab-series" class="wordcloud-tab"></div>
+          </div>
+
+          <div id="wordcloud-labels">
+            推薦的
+            <label id="wordcloud-label-acgn" for="wordcloud-radio-acgn" class="wordcloud-label">動漫作品</label>
+            <label id="wordcloud-label-music" for="wordcloud-radio-music" class="wordcloud-label">音樂</label>
+            <label id="wordcloud-label-game" for="wordcloud-radio-game" class="wordcloud-label">遊戲</label>
+            <label id="wordcloud-label-series" for="wordcloud-radio-series" class="wordcloud-label">連續劇</label>
+          </div>
         </section>
         <section id="interests">
             <div class="interest" id="fonts">
