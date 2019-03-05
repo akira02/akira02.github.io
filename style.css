@@ -234,7 +234,7 @@ p {
 }
 
 input[name="wordcloud-radio"] {
-  display: none;
+    display: none;
 }
 
 #wordcloud-tabs {
@@ -254,10 +254,10 @@ input[name="wordcloud-radio"] {
     height: 100%;
 }
 
-#wordcloud-radio-acgn:checked ~ #wordcloud-tabs #wordcloud-tab-acgn,
-#wordcloud-radio-music:checked ~ #wordcloud-tabs #wordcloud-tab-music,
-#wordcloud-radio-game:checked ~ #wordcloud-tabs #wordcloud-tab-game,
-#wordcloud-radio-series:checked ~ #wordcloud-tabs #wordcloud-tab-series {
+#wordcloud-radio-acgn:checked~#wordcloud-tabs #wordcloud-tab-acgn,
+#wordcloud-radio-music:checked~#wordcloud-tabs #wordcloud-tab-music,
+#wordcloud-radio-game:checked~#wordcloud-tabs #wordcloud-tab-game,
+#wordcloud-radio-series:checked~#wordcloud-tabs #wordcloud-tab-series {
     visibility: visible;
     opacity: 1;
 }
@@ -272,7 +272,7 @@ input[name="wordcloud-radio"] {
 #wordcloud-labels {
     text-align: center;
     font-size: 50px;
-    font-family: jf-jinxuan;
+    font-family: 'jf-jinxuan-medium';
     color: white;
 }
 
@@ -282,10 +282,10 @@ input[name="wordcloud-radio"] {
     opacity: 0.7;
 }
 
-#wordcloud-radio-acgn:checked ~ #wordcloud-labels #wordcloud-label-acgn,
-#wordcloud-radio-music:checked ~ #wordcloud-labels #wordcloud-label-music,
-#wordcloud-radio-game:checked ~ #wordcloud-labels #wordcloud-label-game,
-#wordcloud-radio-series:checked ~ #wordcloud-labels #wordcloud-label-series {
+#wordcloud-radio-acgn:checked~#wordcloud-labels #wordcloud-label-acgn,
+#wordcloud-radio-music:checked~#wordcloud-labels #wordcloud-label-music,
+#wordcloud-radio-game:checked~#wordcloud-labels #wordcloud-label-game,
+#wordcloud-radio-series:checked~#wordcloud-labels #wordcloud-label-series {
     color: #ffec20;
     opacity: 1;
 }
