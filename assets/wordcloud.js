@@ -162,7 +162,7 @@ var game = [
     { text: 'Watch_Dogs 看門狗', count: 9 },
     { text: 'maimai', count: 10 },
     { text: 'Deemo', count: 9 },
-    { text: 'Cytus', count: 9 },
+    { text: 'Cytus', count: 8 },
     { text: 'Sniper Elite', count: 9 },
     { text: 'Minecraft', count: 9 },
     { text: 'ねこあつめ 貓咪收集', count: 9 },
