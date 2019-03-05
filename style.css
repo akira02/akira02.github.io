@@ -206,6 +206,16 @@ p {
     #about-text {
         margin: 10% 5% 10% 5%;
     }
+    #avatar p,
+    #avatar h2 {
+        margin: 15px 40px 15px 40px;
+    }
+    #avatar {
+        padding: 50px 0 50px 0;
+    }
+    #wordcloud-labels {
+        font-size: 25px !important;
+    }
 }
 
 #avatar {
@@ -230,6 +240,7 @@ p {
 #wordcloud {
     width: 100%;
     height: 700px;
+    max-height: 100vh;
     background-color: rgb(33, 33, 31);
 }
 
