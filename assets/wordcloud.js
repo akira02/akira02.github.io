@@ -207,13 +207,14 @@ function config(words) {
         }]
     }
 }
-
-for (var name in wordclouds) {
-    zingchart.render({
-        id: 'wordcloud-tab-' + name,
-        data: config(wordclouds[name]),
-        height: '100%',
-        width: '100%',
-        theme: 'dark'
-    });
-}
+setTimeout(function start() {
+    for (var name in wordclouds) {
+        zingchart.render({
+            id: 'wordcloud-tab-' + name,
+            data: config(wordclouds[name]),
+            height: '100%',
+            width: '100%',
+            theme: 'dark'
+        });
+    }
+}, 3500)
