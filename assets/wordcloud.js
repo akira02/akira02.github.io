@@ -1,5 +1,5 @@
 var acgn = [
-    { text: '魔法少女まどか☆マギカ', count: 10 },
+    { text: '魔法少女小圓', count: 10 },
     { text: 'Steins;Gate', count: 9 },
     { text: 'Psycho-Pass S01', count: 9 },
     { text: 'NO GAME NO LIFE 遊戲人生', count: 9 },
