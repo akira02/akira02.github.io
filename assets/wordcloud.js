@@ -35,7 +35,7 @@ var acgn = [
     { text: '廢天使加百列', count: 7 },
     { text: '別當歐尼醬了', count: 7 },
     { text: '擅長捉弄人的高木同學', count: 7 },
-    { text: '擅長捉弄人的原高木同學', count: 7 },
+    { text: '擅長捉弄人的(原)高木同學', count: 7 },
     { text: '賢慧幼妻仙狐小姐', count: 7 },
     { text: '非人哉', count: 7 },
     { text: '強襲魔女', count: 7 },
