@@ -280,6 +280,7 @@ input[name="wordcloud-radio"] {
     color: #999;
     cursor: pointer;
     opacity: 0.7;
+    font-weight: 100;
 }
 
 #wordcloud-radio-acgn:checked~#wordcloud-labels #wordcloud-label-acgn,
@@ -288,6 +289,7 @@ input[name="wordcloud-radio"] {
 #wordcloud-radio-series:checked~#wordcloud-labels #wordcloud-label-series {
     color: #ffec20;
     opacity: 1;
+    font-weight: 300;
 }
 
 #interests {
