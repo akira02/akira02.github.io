@@ -207,7 +207,7 @@ function config(words) {
 
 var names = ['acgn', 'music', 'game', 'series']
 
-var render = names.reduceRight(function (next, name) {
+var render = names.reduceRight(function(next, name) {
     return function render() {
         zingchart.render({
             id: 'wordcloud-tab-' + name,
@@ -217,6 +217,6 @@ var render = names.reduceRight(function (next, name) {
             events: { load: next }
         });
     }
-}, function () {})
+}, function() {})
 
-render()
+setTimeout(render, 3500)
