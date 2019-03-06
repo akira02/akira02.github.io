@@ -207,14 +207,20 @@ function config(words) {
         }]
     }
 }
-setTimeout(function start() {
-    for (var name in wordclouds) {
+
+var names = ['acgn', 'music', 'game', 'series']
+
+var render = names.reduceRight(function (next, name) {
+    return function render() {
         zingchart.render({
             id: 'wordcloud-tab-' + name,
             data: config(wordclouds[name]),
             height: '100%',
             width: '100%',
-            theme: 'dark'
+            theme: 'dark',
+            events: { load: next }
         });
     }
-}, 3500)
+}, function () {})
+
+render()
