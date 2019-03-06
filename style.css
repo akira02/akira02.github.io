@@ -241,7 +241,7 @@ p {
     width: 100%;
     height: 700px;
     max-height: 100vh;
-    background-color: rgb(33, 33, 31);
+    background-color: #221f1f;
 }
 
 .wordcloud-radio {
