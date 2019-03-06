@@ -193,18 +193,15 @@ var wordclouds = {
 
 function config(words) {
     return {
-        graphset: [{
-            id: "wordcloud",
-            height: '100%',
-            width: "100%",
-            offsetY: "20%",
-            type: "wordcloud",
-            options: {
-                maxFontSize: 48,
-                words: words,
-                palette: ['#bdc3c7', '#1abc9c', '#3498db', '#9b59b6', '#f1c40f', '#e74c3c', '#2ecc71', '#e67e22']
-            }
-        }]
+        type: 'wordcloud',
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'transparent',
+        options: {
+            maxFontSize: 48,
+            words: words,
+            palette: ['#bdc3c7', '#1abc9c', '#3498db', '#9b59b6', '#f1c40f', '#e74c3c', '#2ecc71', '#e67e22']
+        }
     }
 }
 
@@ -217,7 +214,6 @@ var render = names.reduceRight(function (next, name) {
             data: config(wordclouds[name]),
             height: '100%',
             width: '100%',
-            theme: 'dark',
             events: { load: next }
         });
     }
