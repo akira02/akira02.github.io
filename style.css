@@ -291,7 +291,6 @@ p {
 .wordcloud-label {
     color: #999;
     cursor: pointer;
-    opacity: 0.7;
 }
 
 #wordcloud-radio-acgn:checked~#wordcloud-labels #wordcloud-label-acgn,
