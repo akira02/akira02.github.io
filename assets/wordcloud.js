@@ -120,7 +120,7 @@ var music = [
     { text: '久石讓', count: 8 },
     { text: 'DJ OKAWARI', count: 9 },
     { text: '高垣楓(CV.早見沙織)', count: 9 },
-    { text: '米津玄师', count: 9 },
+    { text: '米津玄師', count: 9 },
     { text: '藍井エイル', count: 9 },
     { text: 'DJ OKAWARI', count: 9 },
     { text: '奧華子', count: 8 },
