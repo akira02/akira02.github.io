@@ -229,7 +229,6 @@ p {
 }
 
 #avatar img {
-    height: 80vw;
     max-height: 300px;
     border-radius: 50%;
     margin: 30px;
