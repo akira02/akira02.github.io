@@ -325,6 +325,11 @@ p {
     justify-content: center;
 }
 
+.interest-img>h2 {
+    font-size: 5em;
+    font-weight: 100;
+}
+
 .interest-text {
     color: #fff;
     background-color: rgba(39, 7, 8, 0.6);
@@ -405,7 +410,7 @@ p {
         align-items: flex-start;
     }
     .interest-img>h2 {
-        margin-top: 20px;
+        margin-top: 5px;
     }
     .interest-text {
         top: -300px;
