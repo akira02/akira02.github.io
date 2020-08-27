@@ -1,35 +1,42 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - Taiwan COVID-19 Days Counter</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Chivo:400,900'><link rel="stylesheet" href="./style.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Taiwan COVID-19 Days Counter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Chivo:400,900"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div>距離台灣首例確診</div>
+    <div class="countup" id="time">
+      <span class="timeel days num">00</span>
+      <span class="timeel timeRefDays">days</span>
+      <span class="timeel hours num">00</span>
+      <span class="timeel timeRefHours">hours</span>
+      <span class="timeel minutes num">00</span>
+      <span class="timeel timeRefMinutes">minutes</span>
+      <span class="timeel seconds num">00</span>
+      <span class="timeel timeRefSeconds">seconds</span>
+    </div>
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<div>距離台灣首例確診</div>
-<div class="countup" id="time">
-  <span class="timeel days num">00</span>
-  <span class="timeel timeRefDays">days</span>
-  <span class="timeel hours num">00</span>
-  <span class="timeel timeRefHours">hours</span>
-  <span class="timeel minutes num">00</span>
-  <span class="timeel timeRefMinutes">minutes</span>
-  <span class="timeel seconds num">00</span>
-  <span class="timeel timeRefSeconds">seconds</span>
-</div>
+    <div>
+      台灣 <span class="confirmnum num" id="twnum">00</span> 例
+      <span class="confirmnum num" id="twdeadnum">00</span> 死
+    </div>
 
-<div>台灣 <span class="confirmnum num" id="twnum">00</span> 例
-  <span class="confirmnum num" id="twdeadnum">00</span> 死
-</div>
-
-<div>世界 <span class="confirmnum num" id="worldnum">00</span> 例
-  <span class="confirmnum num" id="worlddeadnum">00</span> 死
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
-
-</body>
+    <div>
+      世界 <span class="confirmnum num" id="worldnum">00</span> 例
+      <span class="confirmnum num" id="worlddeadnum">00</span> 死
+    </div>
+    <div id="chiaki">Made by <a href="http://chiaki.uk">Chiaki</a></div>
+    <script src="./script.js"></script>
+  </body>
 </html>
