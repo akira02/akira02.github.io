@@ -1,0 +1,51 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  height: 100vh;
+  font-family: nixie2, "Chivo", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+#time {
+  font-size: 20px;
+}
+#time span {
+  font-variant: small-caps;
+  font-weight: 300;
+  vertical-align: middle;
+}
+
+p {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.num {
+  font-size: 100px;
+  color: #ff7552;
+  font-weight: 200;
+  text-shadow: 0px 0px 6px rgba(255, 65, 0, 0.7), 0px 0px 20px #ff8000, 0px 0px 10px #761203;
+}
+
+.confirmnum {
+  font-size: 40px;
+  vertical-align: middle;
+}
+
+.confirmed {
+  text-align: center;
+}
+
+@font-face {
+  font-family: nixie2;
+  src: url(https://chiaki.uk/assets/AkiNixieNumber-Regular.woff2) format("woff2"), url(https://chiaki.uk/assets/AkiNixieNumber-Regular.woff) format("woff");
+}
