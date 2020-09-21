@@ -1,15 +1,18 @@
 window.onload = function () {
   // Month Day, Year Hour:Minute:Second, id-of-element-container
   countUpFromTime("Jan 21, 2020 20:51:00", "time");
-  fetch('https://covid2019-api.herokuapp.com/v2/country/Taiwan*')
-  .then(response => response.json())
-  .then((data) => {document.getElementById("twnum").innerHTML = data.data.confirmed;
-                  document.getElementById("twdeadnum").innerHTML = data.data.deaths;})
-  fetch('https://covid2019-api.herokuapp.com/v2/total')
-  .then(response => response.json())
-  .then((data) => {document.getElementById("worldnum").innerHTML = data.data.confirmed;
-                  document.getElementById("worlddeadnum").innerHTML = data.data.deaths;})
-  
+  fetch("https://covid2019-api.herokuapp.com/v2/country/TW")
+    .then((response) => response.json())
+    .then((data) => {
+      document.getElementById("twnum").innerHTML = data.data.confirmed;
+      document.getElementById("twdeadnum").innerHTML = data.data.deaths;
+    });
+  fetch("https://covid2019-api.herokuapp.com/v2/total")
+    .then((response) => response.json())
+    .then((data) => {
+      document.getElementById("worldnum").innerHTML = data.data.confirmed;
+      document.getElementById("worlddeadnum").innerHTML = data.data.deaths;
+    });
 };
 function countUpFromTime(countFrom, id) {
   countFrom = new Date(countFrom).getTime();
